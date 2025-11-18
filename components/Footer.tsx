@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white mt-auto border-t border-slate-700/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               CSM Study Zone
@@ -39,6 +39,29 @@ export default function Footer() {
                 <Link href="/programming" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
                   <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
                   Programming
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-white">Legal</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/disclaimer" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  Disclaimer
                 </Link>
               </li>
             </ul>
