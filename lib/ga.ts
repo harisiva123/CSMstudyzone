@@ -1,0 +1,14 @@
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-C3449BZQJK";
+
+export const pageview = (url: string) => {
+  if (!GA_ID || typeof window === "undefined") return;
+  window.gtag?.("config", GA_ID, {
+    page_path: url,
+  });
+};
+
+export const event = (action: string, params: Record<string, any>) => {
+  if (typeof window === "undefined") return;
+  window.gtag?.("event", action, params);
+};
+
