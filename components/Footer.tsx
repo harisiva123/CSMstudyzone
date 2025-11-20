@@ -44,6 +44,53 @@ export default function Footer() {
             </ul>
           </div>
           <div>
+            <h3 className="text-xl font-bold mb-4 text-white">C Language</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/programming/c-language" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  C Basics
+                </Link>
+              </li>
+              <li>
+                <Link href="/programming/c-language/programming-tips" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  Programming Tips
+                </Link>
+              </li>
+              <li>
+                <Link href="/programming/c-language/important-programs" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  Important Programs
+                </Link>
+              </li>
+              <li>
+                <Link href="/programming/c-language/practice-questions" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  Practice Questions
+                </Link>
+              </li>
+              <li>
+                <Link href="/programming/c-language/debugging" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  Debugging Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/programming/c-language/viva-questions" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  Viva Questions
+                </Link>
+              </li>
+              <li>
+                <Link href="/programming/c-language/full-notes" className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  Full Notes
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
             <h3 className="text-xl font-bold mb-4 text-white">Legal</h3>
             <ul className="space-y-3">
               <li>
