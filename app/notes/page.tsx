@@ -13,6 +13,27 @@ export default function NotesPage() {
       </p>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* C Programming Notes - Special Card */}
+        <Link
+          href="/programming/c-language/notes"
+          className="group block rounded-2xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 to-purple-50 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+        >
+          <h2 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors">
+            C Programming – Topic-wise Notes
+          </h2>
+          <p className="text-sm text-gray-500 mb-3">
+            C Programming
+          </p>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Comprehensive topic-wise notes covering all C programming concepts including variables, operators, control statements, functions, pointers, structures, file handling, and more. Browse 13 topics with syntax, examples, and explanations.
+          </p>
+          <div className="mt-4 text-indigo-600 font-semibold text-sm group-hover:gap-2 inline-flex items-center gap-1">
+            Explore Notes
+            <span className="text-lg transition-transform group-hover:translate-x-1">→</span>
+          </div>
+        </Link>
+
+        {/* Regular Notes */}
         {notes.map((note) => (
           <Link
             key={note.slug}

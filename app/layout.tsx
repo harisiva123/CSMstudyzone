@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL("https://www.csmstudyzone.in"),
+  icons: {
+    icon: "/csm-logo.png",
+    shortcut: "/csm-logo.png",
+    apple: "/csm-logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",

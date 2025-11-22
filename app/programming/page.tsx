@@ -35,12 +35,32 @@ export default function ProgrammingPage() {
       </div>
 
       {/* C Programming Section */}
-      <div className="prose prose-lg mt-8">
+      <div className="mt-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">C Programming</h2>
         <p className="text-gray-600 mb-6">
           Comprehensive C programming resources including basics, tips, programs, practice questions, debugging guides, viva questions, and complete notes.
         </p>
-        <ul className="space-y-3">
+        
+        {/* C Language Notes Card */}
+        <div className="mb-6">
+          <Link
+            href="/programming/c-language/notes"
+            className="group block rounded-2xl border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 to-purple-50 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors">
+              C Language – Topic-wise Notes
+            </h3>
+            <p className="text-sm text-gray-600 mb-3">
+              Browse comprehensive topic-wise notes with syntax, examples, and explanations for all C programming concepts.
+            </p>
+            <div className="text-indigo-600 font-semibold text-sm group-hover:gap-2 inline-flex items-center gap-1">
+              Explore Notes
+              <span className="text-lg transition-transform group-hover:translate-x-1">→</span>
+            </div>
+          </Link>
+        </div>
+
+        <ul className="space-y-3 prose prose-lg">
           <li>
             <Link href="/programming/c-language" className="text-blue-600 hover:text-blue-700 hover:underline font-medium">
               C Basics

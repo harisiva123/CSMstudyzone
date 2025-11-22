@@ -1,16 +1,37 @@
 import Link from "next/link";
+import Image from "next/image";
+
+const NavbarBrand = () => {
+  // Use SVG as fallback if PNG doesn't exist
+  // Replace with /csm-logo.png when you have the actual logo file
+  const logoSrc = "/csm-logo.svg"; // Change to "/csm-logo.png" when PNG is available
+  
+  return (
+    <Link
+      href="/"
+      className="flex items-center gap-3 group"
+      aria-label="CSM Study Zone - Home"
+    >
+      <div className="relative h-10 w-28 sm:h-12 sm:w-32 md:h-14 md:w-36">
+        <Image
+          src={logoSrc}
+          alt="CSM Study Zone logo"
+          fill
+          className="object-contain drop-shadow-sm"
+          priority
+          sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
+        />
+      </div>
+    </Link>
+  );
+};
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 glass shadow-lg border-b border-gray-200/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between py-4">
-          <Link 
-            href="/" 
-            className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200"
-          >
-            CSM Study Zone
-          </Link>
+          <NavbarBrand />
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <Link 
               href="/" 

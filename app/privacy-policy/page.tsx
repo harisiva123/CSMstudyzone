@@ -8,177 +8,239 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-extrabold tracking-tight mb-2">
-        Privacy Policy
-      </h1>
-      <p className="text-sm text-slate-500 mb-8">Last updated: January 2025</p>
+    <main className="max-w-4xl mx-auto px-4 py-8">
+      <div className="bg-white/70 rounded-xl shadow-md border border-gray-200 p-6 md:p-8 backdrop-blur">
+        <h1 className="text-3xl font-extrabold tracking-tight mb-2 text-gray-900">
+          Privacy Policy for CSM Study Zone
+        </h1>
+        <p className="text-sm text-gray-600 mb-8">Last updated: 19 November 2025</p>
 
-      <div className="space-y-8 text-slate-800">
-        {/* Intro */}
-        <section className="space-y-3">
-          <p>
-            Welcome to <span className="font-semibold">CSM Study Zone</span>
-            {" "}(&quot;we&quot;, &quot;our&quot;, &quot;us&quot;). This Privacy Policy explains
-            how we collect, use and safeguard information when you visit{" "}
-            <span className="font-mono text-sm">https://csmstudyzone.in</span>.
-          </p>
-          <p>
-            By using this website, you agree to the practices described in this
-            policy. If you do not agree, please discontinue use of the site.
-          </p>
-        </section>
+        <div className="space-y-6 text-gray-800 prose prose-indigo max-w-none">
+          {/* Introduction */}
+          <section className="space-y-4">
+            <p>
+              Welcome to CSM Study Zone (accessible at{" "}
+              <a
+                href="https://csmstudyzone.in"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                https://csmstudyzone.in
+              </a>
+              ). Your privacy is important to us. This Privacy Policy explains what
+              information we collect, how we use it, and how we keep it safe.
+            </p>
+            <p>
+              By using this website, you agree to the practices described here.
+            </p>
+          </section>
 
-        {/* 1. Information We Collect */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">
-            1. Information We Collect
-          </h2>
-          <p>
-            We do not require visitors to create an account to access study
-            materials. However, some basic technical information may be
-            collected automatically when you use the site, such as:
-          </p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>IP address</li>
-            <li>Browser type and version</li>
-            <li>Pages visited and time spent</li>
-            <li>Date and time of visit</li>
-            <li>Basic analytics data (for traffic and performance)</li>
-          </ul>
-          <p>
-            This information is used only for aggregate statistics and to
-            improve the reliability and usability of the website.
-          </p>
-        </section>
+          {/* 1. Information We Collect */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              1. Information We Collect
+            </h2>
 
-        {/* 2. Cookies */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">2. Cookies</h2>
-          <p>
-            We may use cookies and similar technologies to enhance your
-            experience on CSM Study Zone. Cookies are small text files stored on
-            your device by your browser.
-          </p>
-          <p>We may use cookies to:</p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>Remember basic preferences</li>
-            <li>Understand how visitors use the website</li>
-            <li>Display relevant advertisements (e.g., Google AdSense)</li>
-          </ul>
-          <p>
-            You can choose to disable cookies through your browser settings. If
-            you disable cookies, some parts of the website may not function as
-            intended, but basic access to notes and materials will still be
-            possible.
-          </p>
-        </section>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  a) Information you choose to send us
+                </h3>
+                <p>
+                  We do not use any registration, login, comment, or subscription forms
+                  on this website.
+                </p>
+                <p>
+                  The only way you may share personal information with us is if you
+                  contact us by email (for example, for feedback or queries). In that
+                  case we may receive:
+                </p>
+                <ul className="list-disc list-inside space-y-1 ml-4 mt-2">
+                  <li>Your email address</li>
+                  <li>Your name (if included in your email)</li>
+                  <li>Any other details you write in the message</li>
+                </ul>
+                <p className="mt-2">
+                  We use this information only to reply to you and do not sell or
+                  share it with third parties for marketing.
+                </p>
+              </div>
 
-        {/* 3. Google AdSense & Third-Party Ads */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">
-            3. Google AdSense &amp; Third-Party Advertising
-          </h2>
-          <p>
-            We use <span className="font-semibold">Google AdSense</span> and
-            may use other third-party advertising networks to display ads on
-            this website.
-          </p>
-          <p>
-            These third parties may use cookies and similar technologies to:
-          </p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>Show personalized advertisements based on your interests</li>
-            <li>Measure the effectiveness of their campaigns</li>
-          </ul>
-          <p>
-            We do not control the cookies and tracking technologies used by
-            third-party advertisers. Their practices are governed by their own
-            privacy policies. You can learn more about Google&apos;s ad
-            practices and opt out of personalized advertising through Google ad
-            settings.
-          </p>
-        </section>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  b) Information collected automatically
+                </h3>
+                <p>
+                  When you visit CSM Study Zone, some technical information is
+                  collected automatically, such as:
+                </p>
+                <ul className="list-disc list-inside space-y-1 ml-4 mt-2">
+                  <li>IP address</li>
+                  <li>Browser type and version</li>
+                  <li>Device type</li>
+                  <li>Pages visited and time spent</li>
+                  <li>Referring/exit pages</li>
+                </ul>
+                <p className="mt-2">
+                  This is done mainly through Google Analytics and similar tools to
+                  understand how visitors use the website and to improve our content
+                  and performance.
+                </p>
+              </div>
+            </div>
+          </section>
 
-        {/* 4. How We Use Data */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">4. How We Use the Collected Data</h2>
-          <p>The information we collect is primarily used to:</p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>Improve the content and structure of the website</li>
-            <li>Monitor performance, traffic and usage patterns</li>
-            <li>Diagnose technical problems and prevent abuse</li>
-            <li>Display relevant advertisements where applicable</li>
-          </ul>
-          <p>
-            We do not sell, trade or rent your personal information to third
-            parties.
-          </p>
-        </section>
+          {/* 2. Cookies and Tracking Technologies */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              2. Cookies and Tracking Technologies
+            </h2>
+            <p>
+              We use cookies and similar technologies for:
+            </p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>
+                <strong>Analytics</strong> – to understand traffic and usage patterns
+                (via Google Analytics).
+              </li>
+              <li>
+                <strong>Advertising</strong> – when Google AdSense is enabled, cookies
+                may be used to show relevant ads.
+              </li>
+            </ul>
+            <p>
+              You can control or disable cookies in your browser settings. Note that
+              some features may not work properly if cookies are disabled.
+            </p>
+          </section>
 
-        {/* 5. External Links */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">5. External Links</h2>
-          <p>
-            CSM Study Zone may contain links to external websites, tools or
-            resources (for example, documentation, datasets or GitHub
-            repositories). These sites are not operated by us.
-          </p>
-          <p>
-            We are not responsible for the content, privacy policies or
-            practices of any third-party websites. We encourage you to review
-            the privacy policy of each site you visit.
-          </p>
-        </section>
+          {/* 3. Google Analytics */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              3. Google Analytics
+            </h2>
+            <p>
+              We use Google Analytics to measure traffic and usage. Google Analytics
+              may collect information such as:
+            </p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>Pages visited</li>
+              <li>Time spent on each page</li>
+              <li>Type of device and browser</li>
+            </ul>
+            <p>
+              This information is aggregated and does not identify you personally.
+            </p>
+            <p>
+              You can learn more and opt out here:{" "}
+              <a
+                href="https://tools.google.com/dlpage/gaoptout"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                https://tools.google.com/dlpage/gaoptout
+              </a>
+            </p>
+          </section>
 
-        {/* 6. Data Security */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">6. Data Security</h2>
-          <p>
-            We take reasonable technical and organizational measures to protect
-            the information collected on this website. However, no method of
-            transmission over the Internet or electronic storage is completely
-            secure, and we cannot guarantee absolute security.
-          </p>
-        </section>
+          {/* 4. Google AdSense and Advertising Partners */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              4. Google AdSense and Advertising Partners
+            </h2>
+            <p>We may use Google AdSense to display advertisements on this site.</p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>
+                Third-party vendors, including Google, use cookies to serve ads based
+                on your visits to this and other websites.
+              </li>
+              <li>
+                Google&apos;s use of advertising cookies enables it and its partners to
+                serve ads based on your browsing.
+              </li>
+            </ul>
+            <p>
+              You can opt out of personalized advertising by visiting:{" "}
+              <a
+                href="https://www.google.com/settings/ads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                https://www.google.com/settings/ads
+              </a>
+            </p>
+          </section>
 
-        {/* 7. Children's Privacy */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">7. Children&apos;s Privacy</h2>
-          <p>
-            This website is intended for college and higher-education students.
-            We do not knowingly collect personal information from children under
-            the age of 13. If you believe a child has provided us with personal
-            data, please contact us so that we can remove such information.
-          </p>
-        </section>
+          {/* 5. Third-Party Links */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              5. Third-Party Links
+            </h2>
+            <p>
+              CSM Study Zone may contain links to external websites (for example,
+              official documentation or reference sites). We are not responsible for
+              the privacy practices or content of those third-party sites.
+            </p>
+            <p>Please review their privacy policies separately.</p>
+          </section>
 
-        {/* 8. Changes to This Policy */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">
-            8. Changes to This Privacy Policy
-          </h2>
-          <p>
-            We may update this Privacy Policy from time to time to reflect
-            changes in technology, legal requirements or our services. The
-            &quot;Last updated&quot; date at the top of this page indicates the
-            latest revision. Changes take effect when they are posted on this
-            page.
-          </p>
-        </section>
+          {/* 6. Data Security */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              6. Data Security
+            </h2>
+            <p>
+              We use reasonable technical and organizational measures to protect the
+              information we collect. However, no method of transmission over the
+              internet is 100% secure, so we cannot guarantee absolute security.
+            </p>
+          </section>
 
-        {/* 9. Contact */}
-        <section className="space-y-3">
-          <h2 className="text-xl font-semibold">9. Contact Us</h2>
-          <p>
-            If you have any questions or suggestions regarding this Privacy
-            Policy, you can contact us at:
-          </p>
-          <p>
-            Email:{" "}
-            <span className="font-medium">csmstudyzone@gmail.com</span>
-          </p>
-        </section>
+          {/* 7. Children's Privacy */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              7. Children&apos;s Privacy
+            </h2>
+            <p>
+              CSM Study Zone is intended for students and learners above school level.
+              We do not knowingly collect personal information from children under 13.
+              If you believe a child has provided us with personal information, please
+              contact us so we can remove it.
+            </p>
+          </section>
+
+          {/* 8. Changes to This Policy */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              8. Changes to This Policy
+            </h2>
+            <p>
+              We may update this Privacy Policy from time to time. Any changes will be
+              posted on this page with a new &quot;Last updated&quot; date.
+            </p>
+          </section>
+
+          {/* 9. Contact Us */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-6 mb-4">
+              9. Contact Us
+            </h2>
+            <p>
+              If you have any questions about this Privacy Policy, you can contact us
+              at:
+            </p>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:csmstudyzone@gmail.com"
+                className="text-blue-600 hover:text-blue-800 underline font-medium"
+              >
+                csmstudyzone@gmail.com
+              </a>
+            </p>
+          </section>
+        </div>
       </div>
     </main>
   );
