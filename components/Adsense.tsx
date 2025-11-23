@@ -2,11 +2,10 @@
 
 import Script from "next/script";
 
-const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+// AdSense Client ID for site verification
+const ADSENSE_CLIENT_ID = "ca-pub-1661569191684905";
 
 export function AdsenseScript() {
-  if (!ADSENSE_CLIENT_ID) return null;
-
   return (
     <Script
       async
