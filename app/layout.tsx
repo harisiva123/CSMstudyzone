@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
-import { AdsenseScript } from "@/components/Adsense";
 import CookieConsentBar from "@/components/CookieConsentBar";
 
 export const metadata: Metadata = {
@@ -72,7 +72,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans">
-        <AdsenseScript />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1661569191684905"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
+        />
         <Analytics />
         <div className="flex min-h-screen flex-col">
           <Header />
