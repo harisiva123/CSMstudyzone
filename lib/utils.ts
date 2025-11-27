@@ -12,3 +12,4 @@ export function getLastUpdatedDate(): string {
   return date.toLocaleDateString('en-US', options);
 }
 
+

@@ -8,11 +8,32 @@ export default function LabsPage() {
         Labs
       </h1>
       <p className="text-lg text-gray-600 mb-8 max-w-2xl">
-        Explore lab experiments for CVIP, Machine Learning, Python and more.
+        Explore lab experiments for C Programming, CVIP, Machine Learning, Python and more.
         Each experiment includes objective, theory, algorithm and implementation outline.
       </p>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* C Programming Lab - Special Card */}
+        <Link
+          href="/labs/c-programming"
+          className="group block rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+        >
+          <h2 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">
+            C Programming Laboratory
+          </h2>
+          <p className="text-sm text-gray-500 mb-3">
+            C Programming Lab
+          </p>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Comprehensive lab experiments covering fundamental to advanced C programming concepts. 14 experiments including basic I/O, control structures, arrays, strings, functions, pointers, structures, file handling, and dynamic memory allocation.
+          </p>
+          <div className="mt-4 text-green-600 font-semibold text-sm group-hover:gap-2 inline-flex items-center gap-1">
+            Explore Lab
+            <span className="text-lg transition-transform group-hover:translate-x-1">→</span>
+          </div>
+        </Link>
+
+        {/* Regular Labs */}
         {labs.map((lab) => (
           <Link
             key={lab.slug}
