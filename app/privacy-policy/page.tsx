@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getLastUpdatedDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | CSM Study Zone",
@@ -7,13 +8,15 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicyPage() {
+  const lastUpdated = getLastUpdatedDate();
+  
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <div className="bg-white/70 rounded-xl shadow-md border border-gray-200 p-6 md:p-8 backdrop-blur">
         <h1 className="text-3xl font-extrabold tracking-tight mb-2 text-gray-900">
           Privacy Policy for CSM Study Zone
         </h1>
-        <p className="text-sm text-gray-600 mb-8">Last updated: 19 November 2025</p>
+        <p className="text-sm text-gray-600 mb-8">Last updated: {lastUpdated}</p>
 
         <div className="space-y-6 text-gray-800 prose prose-indigo max-w-none">
           {/* Introduction */}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getLastUpdatedDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | CSM Study Zone",
@@ -7,13 +8,15 @@ export const metadata: Metadata = {
 };
 
 export default function TermsAndConditionsPage() {
+  const lastUpdated = getLastUpdatedDate();
+  
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <div className="bg-white/70 rounded-xl shadow-md border border-gray-200 p-6 md:p-8 backdrop-blur">
         <h1 className="text-3xl font-extrabold tracking-tight mb-2 text-gray-900">
           Terms & Conditions
         </h1>
-        <p className="text-sm text-gray-600 mb-8">Last updated: 19 November 2025</p>
+        <p className="text-sm text-gray-600 mb-8">Last updated: {lastUpdated}</p>
         <p className="text-gray-700 mb-8 leading-relaxed">
           These Terms & Conditions govern your use of CSM Study Zone (accessible at{" "}
           <a

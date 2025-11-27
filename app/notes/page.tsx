@@ -33,6 +33,26 @@ export default function NotesPage() {
           </div>
         </Link>
 
+        {/* C++ Programming Notes - Special Card */}
+        <Link
+          href="/notes/cpp-programming"
+          className="group block rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-cyan-50 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+        >
+          <h2 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            C++ Programming – Topic-wise Notes
+          </h2>
+          <p className="text-sm text-gray-500 mb-3">
+            C++ Programming
+          </p>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Comprehensive topic-wise notes covering C++ programming concepts including OOP, inheritance, polymorphism, templates, STL, exception handling, file operations, and more. Browse 14 topics with detailed explanations and code examples.
+          </p>
+          <div className="mt-4 text-blue-600 font-semibold text-sm group-hover:gap-2 inline-flex items-center gap-1">
+            Explore Notes
+            <span className="text-lg transition-transform group-hover:translate-x-1">→</span>
+          </div>
+        </Link>
+
         {/* Regular Notes */}
         {notes.map((note) => (
           <Link
