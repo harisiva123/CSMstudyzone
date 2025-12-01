@@ -494,6 +494,23 @@ if (fp != NULL) {
             and solving problems. Understanding the fundamentals is crucial before moving to advanced topics.
           </p>
         </div>
+
+        {/* Practice CTA */}
+        <div className="not-prose mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+          <p className="text-gray-800 font-semibold mb-2">🎯 Want to practice these concepts?</p>
+          <p className="text-gray-700 mb-4">
+            Try our C Programming Practice Problems with lab-style questions, sample I/O, hints, and scoring.
+          </p>
+          <Link
+            href="/practice?language=C"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Practice C Programming
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </main>
   );

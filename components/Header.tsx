@@ -68,6 +68,20 @@ export default function Header() {
               Programming
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link 
+              href="/practice" 
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group"
+            >
+              Practice
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+            </Link>
+            <Link 
+              href="/contests" 
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group"
+            >
+              Contests
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+            </Link>
           </div>
           <button className="md:hidden text-gray-700 hover:text-blue-600">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
