@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Common C Language Errors & Debugging Guide | CSM Study Zone",
   description: "Learn to debug C programs by understanding common errors including missing semicolons, undefined references, segmentation faults, pointer errors, array bounds, and logical errors.",
   keywords: ["C debugging", "C errors", "CSM Study Zone", "C programming errors", "segmentation fault", "pointer errors", "C debugging guide", "fix C errors"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/programming/c-language/debugging",
+  },
 };
 
 export default function DebuggingPage() {

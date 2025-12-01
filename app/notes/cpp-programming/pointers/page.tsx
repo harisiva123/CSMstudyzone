@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about pointers, references, dynamic memory allocation, new and delete operators, pointer arithmetic, and memory management in C++.",
   keywords: ["C++ pointers", "dynamic memory", "new delete", "references", "memory management", "C++ memory"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/pointers",
+  },
 };
 
 export default function PointersPage() {
@@ -313,5 +316,6 @@ int main() {
     </main>
   );
 }
+
 
 

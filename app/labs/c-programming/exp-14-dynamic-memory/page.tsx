@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Use malloc, calloc, realloc, and free for dynamic memory management in C programming. Learn memory allocation, deallocation, and memory leaks prevention.",
   keywords: ["C programming", "dynamic memory", "malloc", "calloc", "realloc", "free", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-14-dynamic-memory",
+  },
 };
 
 export default function Exp14DynamicMemoryPage() {
@@ -314,4 +317,5 @@ Memory freed successfully!`}</pre>
     </main>
   );
 }
+
 

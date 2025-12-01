@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about structures, unions, nested structures, typedef, and how to use them in C++ programming.",
   keywords: ["C++ structures", "unions", "nested structures", "typedef", "C++ data structures"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/structures",
+  },
 };
 
 export default function StructuresPage() {
@@ -315,5 +318,6 @@ int main() {
     </main>
   );
 }
+
 
 

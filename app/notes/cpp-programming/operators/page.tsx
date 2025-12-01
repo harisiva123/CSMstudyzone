@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about arithmetic, relational, logical, bitwise, assignment, and other operators in C++. Understand operator precedence and expressions.",
   keywords: ["C++ operators", "C++ expressions", "arithmetic operators", "logical operators", "bitwise operators"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/operators",
+  },
 };
 
 export default function OperatorsPage() {

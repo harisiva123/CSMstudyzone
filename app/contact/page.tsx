@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Contact Us | CSM Study Zone",
   description:
     "Contact CSM Study Zone for feedback, corrections, suggestions, or collaboration. Reach out via email.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/contact",
+  },
 };
 
 export default function ContactPage() {

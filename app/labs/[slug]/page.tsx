@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getLabBySlug, labs } from "@/content/labs";
 
 type Props = {
@@ -8,6 +9,24 @@ type Props = {
 
 export function generateStaticParams() {
   return labs.map((lab) => ({ slug: lab.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const lab = getLabBySlug(params.slug);
+  
+  if (!lab) {
+    return {};
+  }
+
+  const canonicalUrl = `https://www.csmstudyzone.in/labs/${params.slug}`;
+
+  return {
+    title: lab.title,
+    description: lab.summary,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
 }
 
 export default function LabDetailPage({ params }: Props) {

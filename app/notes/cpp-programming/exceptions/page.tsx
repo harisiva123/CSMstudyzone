@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about try-catch blocks, throw statement, exception classes, standard exceptions, and error handling in C++.",
   keywords: ["C++ exceptions", "try catch", "throw", "exception handling", "error handling"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/exceptions",
+  },
 };
 
 export default function ExceptionsPage() {
@@ -326,5 +329,6 @@ int main() {
     </main>
   );
 }
+
 
 

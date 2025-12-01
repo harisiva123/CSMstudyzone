@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "C lab manual",
     "programming lab",
   ],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming",
+  },
 };
 
 const experiments = [
@@ -175,4 +178,5 @@ export default function CProgrammingLabPage() {
     </main>
   );
 }
+
 

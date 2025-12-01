@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Find the largest among three numbers using conditional statements (if-else) in C programming. Learn decision-making logic and comparison operators.",
   keywords: ["C programming", "largest of three", "if-else", "conditional statements", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-02-largest-of-three",
+  },
 };
 
 export default function Exp02LargestOfThreePage() {
@@ -223,4 +226,5 @@ if (a > b) {
     </main>
   );
 }
+
 

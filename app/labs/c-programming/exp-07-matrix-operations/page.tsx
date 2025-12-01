@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Perform addition, subtraction, and multiplication of matrices in C programming. Learn 2D arrays and nested loops.",
   keywords: ["C programming", "matrices", "2D arrays", "matrix operations", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-07-matrix-operations",
+  },
 };
 
 export default function Exp07MatrixOperationsPage() {
@@ -307,4 +310,5 @@ Enter choice: 3`}</pre>
     </main>
   );
 }
+
 

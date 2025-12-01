@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "C Programming Tips & Best Practices | CSM Study Zone",
   description: "Learn C programming best practices including clean coding habits, indentation style, commenting guidelines, debugging approaches, memory management tips, and common mistakes to avoid.",
   keywords: ["C programming tips", "C best practices", "CSM Study Zone", "C coding standards", "programming guidelines", "C debugging", "memory management", "clean code"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/programming/c-language/programming-tips",
+  },
 };
 
 export default function ProgrammingTipsPage() {

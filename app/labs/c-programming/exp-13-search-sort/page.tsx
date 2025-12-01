@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Implement linear search, binary search, and sorting algorithms (bubble sort, selection sort) in C programming. Learn algorithm implementation and complexity.",
   keywords: ["C programming", "search algorithms", "sorting algorithms", "linear search", "binary search", "bubble sort", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-13-search-sort",
+  },
 };
 
 export default function Exp13SearchSortPage() {
@@ -400,4 +403,5 @@ Element 56 found at index 4`}</pre>
     </main>
   );
 }
+
 

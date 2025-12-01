@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about classes, objects, encapsulation, abstraction, access specifiers, constructors, destructors, and object-oriented programming principles in C++.",
   keywords: ["C++ OOP", "classes objects", "encapsulation", "abstraction", "constructors", "C++ access specifiers"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/oop",
+  },
 };
 
 export default function OOPPage() {
@@ -321,5 +324,6 @@ int main() {
     </main>
   );
 }
+
 
 

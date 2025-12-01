@@ -1,5 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { programmingItems } from "@/content/programming";
+
+export const metadata: Metadata = {
+  title: "Programming",
+  description: "Learn C, Python, Java and Data Structures concepts with concise notes and example programs. Comprehensive programming resources for B.Tech CSM, CSE and AIML students.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/programming",
+  },
+};
 
 export default function ProgrammingPage() {
   return (

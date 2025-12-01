@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about file operations, reading and writing files, file streams, file modes, and file handling functions in C++.",
   keywords: ["C++ file handling", "file streams", "fstream", "ifstream", "ofstream", "file operations"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/files",
+  },
 };
 
 export default function FilesPage() {
@@ -305,5 +308,6 @@ int main() {
     </main>
   );
 }
+
 
 

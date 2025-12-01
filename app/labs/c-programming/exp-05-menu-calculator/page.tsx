@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Create a menu-driven calculator using switch-case statements in C programming. Learn menu implementation and user interaction.",
   keywords: ["C programming", "menu-driven", "calculator", "switch-case", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-05-menu-calculator",
+  },
 };
 
 export default function Exp05MenuCalculatorPage() {
@@ -294,4 +297,5 @@ Enter second number: 6`}</pre>
     </main>
   );
 }
+
 

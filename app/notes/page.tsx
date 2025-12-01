@@ -1,5 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notes } from "@/content/notes";
+
+export const metadata: Metadata = {
+  title: "Notes",
+  description: "Browse unit-wise notes and helpful summaries for AI, ML, C programming and more. Access comprehensive study materials for B.Tech CSM, CSE and AIML students.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes",
+  },
+};
 
 export default function NotesPage() {
   return (

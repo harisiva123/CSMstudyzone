@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Check if a number is prime using loops and conditions in C programming. Learn efficient prime checking algorithms.",
   keywords: ["C programming", "prime number", "loops", "conditionals", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-04-prime-check",
+  },
 };
 
 export default function Exp04PrimeCheckPage() {
@@ -259,4 +262,5 @@ for (i = 2; i <= n/2; i++) {
     </main>
   );
 }
+
 

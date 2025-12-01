@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about Standard Template Library (STL) in C++: containers (vector, list, map, set), iterators, algorithms, and STL functions.",
   keywords: ["C++ STL", "Standard Template Library", "STL containers", "STL algorithms", "iterators", "vector", "map"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/stl",
+  },
 };
 
 export default function STLPage() {
@@ -359,5 +362,6 @@ int main() {
     </main>
   );
 }
+
 
 

@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CSM Study Zone – Notes, Labs, Projects & Programming for CSM, CSE & AIML",
+  description: "Your comprehensive resource for B.Tech CSM, CSE & AIML students. Access unit-wise notes, lab manuals, question banks, project ideas, and programming resources.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in",
+  },
+};
 
 export default function Home() {
   return (

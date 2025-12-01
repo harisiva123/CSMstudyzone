@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about if-else statements, switch cases, loops (for, while, do-while), break, continue, and nested control structures in C++.",
   keywords: ["C++ control structures", "if else", "loops", "switch case", "break continue"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/control-structures",
+  },
 };
 
 export default function ControlStructuresPage() {
@@ -316,5 +319,6 @@ int main() {
     </main>
   );
 }
+
 
 

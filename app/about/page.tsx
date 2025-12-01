@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "About CSM Study Zone",
   description:
     "Learn about the vision and purpose of CSM Study Zone, an educational platform for CSM, CSE and AIML students.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/about",
+  },
 };
 
 export default function AboutPage() {

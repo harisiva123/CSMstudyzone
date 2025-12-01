@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Disclaimer | CSM Study Zone",
   description:
     "Disclaimer for CSM Study Zone describing academic use, external links, advertisements and limitation of liability.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/disclaimer",
+  },
 };
 
 export default function DisclaimerPage() {

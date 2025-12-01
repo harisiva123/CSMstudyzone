@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "C Language Viva & Interview Questions | CSM Study Zone",
   description: "50 C language viva questions with answers covering memory management, pointers, structures, unions, storage classes, compilation process, and interview topics for B.Tech CSM students.",
   keywords: ["C viva questions", "C interview questions", "CSM Study Zone", "C programming viva", "C exam questions", "C lab viva", "C pointers questions"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/programming/c-language/viva-questions",
+  },
 };
 
 export default function VivaQuestionsPage() {

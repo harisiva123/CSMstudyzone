@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Create and manage student records using structures in C programming. Learn structure definition, initialization, and member access.",
   keywords: ["C programming", "structures", "student records", "struct", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-11-structures-student",
+  },
 };
 
 export default function Exp11StructuresStudentPage() {
@@ -321,4 +324,5 @@ Percentage: 86.60%`}</pre>
     </main>
   );
 }
+
 

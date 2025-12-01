@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about single, multiple, multilevel, hierarchical, and hybrid inheritance in C++. Understand base classes, derived classes, and access specifiers.",
   keywords: ["C++ inheritance", "base class", "derived class", "multiple inheritance", "C++ polymorphism"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/inheritance",
+  },
 };
 
 export default function InheritancePage() {
@@ -346,5 +349,6 @@ int main() {
     </main>
   );
 }
+
 
 

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Calculate factorial of a number using loops in C programming. Learn iterative approach with for and while loops.",
   keywords: ["C programming", "factorial", "loops", "for loop", "while loop", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-03-factorial",
+  },
 };
 
 export default function Exp03FactorialPage() {
@@ -235,4 +238,5 @@ while (i <= n) {
     </main>
   );
 }
+
 

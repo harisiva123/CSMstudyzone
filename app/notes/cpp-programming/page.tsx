@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "OOP C++",
     "C++ STL",
   ],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming",
+  },
 };
 
 const cppTopics = [

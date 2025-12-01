@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Reverse an array using pointer arithmetic in C programming. Learn pointers, address manipulation, and array operations with pointers.",
   keywords: ["C programming", "pointers", "array reverse", "pointer arithmetic", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-10-array-reverse-pointer",
+  },
 };
 
 export default function Exp10ArrayReversePointerPage() {
@@ -282,4 +285,5 @@ Reversed array: 45 35 25 15`}</pre>
     </main>
   );
 }
+
 

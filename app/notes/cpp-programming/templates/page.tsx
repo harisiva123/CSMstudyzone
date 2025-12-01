@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about function templates, class templates, template specialization, template parameters, and generic programming in C++.",
   keywords: ["C++ templates", "function templates", "class templates", "template specialization", "generic programming"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/templates",
+  },
 };
 
 export default function TemplatesPage() {
@@ -360,5 +363,6 @@ int main() {
     </main>
   );
 }
+
 
 

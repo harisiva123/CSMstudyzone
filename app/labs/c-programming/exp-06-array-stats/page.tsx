@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Calculate sum, average, maximum, and minimum of array elements in C programming. Learn array operations and iteration.",
   keywords: ["C programming", "arrays", "statistics", "sum", "average", "max", "min", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-06-array-stats",
+  },
 };
 
 export default function Exp06ArrayStatsPage() {
@@ -264,4 +267,5 @@ Minimum: 12`}</pre>
     </main>
   );
 }
+
 

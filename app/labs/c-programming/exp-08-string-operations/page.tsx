@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Implement string manipulation functions like length, copy, concatenate, and compare in C programming. Learn character arrays and string handling.",
   keywords: ["C programming", "strings", "string operations", "strlen", "strcpy", "strcat", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-08-string-operations",
+  },
 };
 
 export default function Exp08StringOperationsPage() {
@@ -313,4 +316,5 @@ Enter second string: Banana`}</pre>
     </main>
   );
 }
+
 

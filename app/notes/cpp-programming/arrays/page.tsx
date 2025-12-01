@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about arrays, multidimensional arrays, strings, string manipulation functions, and string operations in C++.",
   keywords: ["C++ arrays", "multidimensional arrays", "C++ strings", "string manipulation", "string functions"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/arrays",
+  },
 };
 
 export default function ArraysPage() {
@@ -325,5 +328,6 @@ int main() {
     </main>
   );
 }
+
 
 

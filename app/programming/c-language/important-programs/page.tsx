@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Important C Programs for Practice | CSM Study Zone",
   description: "Practice essential C programs including Fibonacci series, prime numbers, palindrome, factorial, Armstrong numbers, matrix operations, searching, sorting algorithms, and file handling examples.",
   keywords: ["C programs", "C examples", "CSM Study Zone", "C practice programs", "C algorithms", "C programming examples", "data structures C", "C lab programs"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/programming/c-language/important-programs",
+  },
 };
 
 export default function ImportantProgramsPage() {

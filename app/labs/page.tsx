@@ -1,5 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { labs } from "@/content/labs";
+
+export const metadata: Metadata = {
+  title: "Labs",
+  description: "Explore lab experiments for C Programming, CVIP, Machine Learning, Python and more. Each experiment includes objective, theory, algorithm and implementation outline.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs",
+  },
+};
 
 export default function LabsPage() {
   return (

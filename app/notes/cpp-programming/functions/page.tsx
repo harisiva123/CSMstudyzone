@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about function declaration, definition, parameters, return types, function overloading, default arguments, and inline functions in C++.",
   keywords: ["C++ functions", "function overloading", "default arguments", "inline functions", "C++ parameters"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/functions",
+  },
 };
 
 export default function FunctionsPage() {
@@ -290,5 +293,6 @@ int main() {
     </main>
   );
 }
+
 
 

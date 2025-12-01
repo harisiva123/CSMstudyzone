@@ -1,5 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { projects } from "@/content/projects";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Discover mini and major project ideas in AI, ML, CVIP and full-stack development tailored for CSM, CSE and AIML students.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/projects",
+  },
+};
 
 export default function ProjectsPage() {
   return (

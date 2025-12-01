@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about compile-time and runtime polymorphism, virtual functions, function overriding, abstract classes, and pure virtual functions in C++.",
   keywords: ["C++ polymorphism", "virtual functions", "function overriding", "abstract classes", "runtime polymorphism"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/polymorphism",
+  },
 };
 
 export default function PolymorphismPage() {
@@ -295,5 +298,6 @@ int main() {
     </main>
   );
 }
+
 
 

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about the history, features, and basic structure of C++ programming. Understand the evolution from C to C++ and key characteristics of the language.",
   keywords: ["C++ introduction", "C++ history", "C++ features", "C++ basics", "C++ programming"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/notes/cpp-programming/introduction",
+  },
 };
 
 export default function IntroductionPage() {

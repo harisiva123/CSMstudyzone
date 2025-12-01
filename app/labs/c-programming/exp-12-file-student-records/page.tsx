@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Store and retrieve student records from files in C programming. Learn file operations: fopen, fwrite, fread, fclose, and file modes.",
   keywords: ["C programming", "file handling", "file operations", "fopen", "fwrite", "fread", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-12-file-student-records",
+  },
 };
 
 export default function Exp12FileStudentRecordsPage() {
@@ -336,4 +339,5 @@ Roll No    Name                 Mark1    Mark2    Mark3    Total    Percentage
     </main>
   );
 }
+
 

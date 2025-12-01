@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "C Language Practice Questions & Assignments | CSM Study Zone",
   description: "Practice C programming with 50 MCQs, short answer questions, long answer questions, lab practice questions, and assignment questions for B.Tech CSM students.",
   keywords: ["C practice questions", "C MCQs", "C assignments", "CSM Study Zone", "C programming questions", "C lab questions", "C exam preparation"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/programming/c-language/practice-questions",
+  },
 };
 
 export default function PracticeQuestionsPage() {

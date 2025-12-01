@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getNoteBySlug, notes } from "@/content/notes";
 
 type Props = {
@@ -8,6 +9,24 @@ type Props = {
 
 export function generateStaticParams() {
   return notes.map((note) => ({ slug: note.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const note = getNoteBySlug(params.slug);
+  
+  if (!note) {
+    return {};
+  }
+
+  const canonicalUrl = `https://www.csmstudyzone.in/notes/${params.slug}`;
+
+  return {
+    title: note.title,
+    description: note.summary,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
 }
 
 export default function NoteDetailPage({ params }: Props) {

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getProgrammingItemBySlug, programmingItems } from "@/content/programming";
 
 type Props = {
@@ -8,6 +9,24 @@ type Props = {
 
 export function generateStaticParams() {
   return programmingItems.map((item) => ({ slug: item.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const item = getProgrammingItemBySlug(params.slug);
+  
+  if (!item) {
+    return {};
+  }
+
+  const canonicalUrl = `https://www.csmstudyzone.in/programming/${params.slug}`;
+
+  return {
+    title: item.title,
+    description: item.summary,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
 }
 
 export default function ProgrammingDetailPage({ params }: Props) {

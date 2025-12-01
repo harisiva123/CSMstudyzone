@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Generate Fibonacci series using recursive functions in C programming. Learn recursion, base cases, and recursive problem solving.",
   keywords: ["C programming", "fibonacci", "recursion", "recursive functions", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-09-fibonacci-recursion",
+  },
 };
 
 export default function Exp09FibonacciRecursionPage() {
@@ -259,4 +262,5 @@ The 1st Fibonacci number is: 0`}</pre>
     </main>
   );
 }
+
 

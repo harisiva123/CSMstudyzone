@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy | CSM Study Zone",
   description:
     "Privacy Policy for CSM Study Zone explaining how we collect, use and protect information.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

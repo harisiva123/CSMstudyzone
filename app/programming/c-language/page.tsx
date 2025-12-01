@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "C Language – Basics | CSM Study Zone",
   description: "Learn C programming language basics including variables, data types, operators, control statements, loops, arrays, strings, functions, pointers, structures, and file handling.",
   keywords: ["C language", "C programming", "CSM Study Zone", "programming basics", "C notes", "C tutorial", "C programming fundamentals", "B.Tech CSM"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/programming/c-language",
+  },
 };
 
 export default function CLanguagePage() {

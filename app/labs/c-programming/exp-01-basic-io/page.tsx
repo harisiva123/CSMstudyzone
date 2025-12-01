@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn basic input/output operations and arithmetic calculations in C programming. Practice using printf, scanf, and perform basic mathematical operations.",
   keywords: ["C programming", "basic I/O", "arithmetic operations", "printf", "scanf", "C lab"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-01-basic-io",
+  },
 };
 
 export default function Exp01BasicIOPage() {
@@ -231,4 +234,5 @@ Modulus: 100 % 7 = 2`}</pre>
     </main>
   );
 }
+
 

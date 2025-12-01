@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Terms & Conditions | CSM Study Zone",
   description:
     "Terms and Conditions for using CSM Study Zone - Educational platform for CSM, CSE & AIML students.",
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/terms-and-conditions",
+  },
 };
 
 export default function TermsAndConditionsPage() {

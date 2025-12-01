@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Full C Language Notes – Unit-wise | CSM Study Zone",
   description: "Comprehensive unit-wise C programming notes covering basics, tokens, data types, operators, control statements, loops, arrays, strings, functions, pointers, structures, unions, file handling, and command line arguments.",
   keywords: ["C language notes", "C programming notes", "CSM Study Zone", "unit-wise C notes", "C complete notes", "C syllabus notes", "B.Tech CSM C notes"],
+  alternates: {
+    canonical: "https://www.csmstudyzone.in/programming/c-language/full-notes",
+  },
 };
 
 export default function FullNotesPage() {

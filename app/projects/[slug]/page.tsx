@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getProjectBySlug, projects } from "@/content/projects";
 
 type Props = {
@@ -8,6 +9,24 @@ type Props = {
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const project = getProjectBySlug(params.slug);
+  
+  if (!project) {
+    return {};
+  }
+
+  const canonicalUrl = `https://www.csmstudyzone.in/projects/${params.slug}`;
+
+  return {
+    title: project.title,
+    description: project.summary,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
 }
 
 export default function ProjectDetailPage({ params }: Props) {
