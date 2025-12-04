@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Operators & Expressions in C++ – C++ Programming Notes",
+  title: "Operators and Expressions in C++ – Complete Guide with Examples | C++ Notes",
   description:
-    "Learn about arithmetic, relational, logical, bitwise, assignment, and other operators in C++. Understand operator precedence and expressions.",
-  keywords: ["C++ operators", "C++ expressions", "arithmetic operators", "logical operators", "bitwise operators"],
+    "Comprehensive guide to C++ operators including arithmetic, relational, logical, bitwise, assignment, and special operators. Learn operator precedence, associativity, and expression evaluation with practical examples.",
+  keywords: [
+    "C++ operators",
+    "C++ expressions",
+    "arithmetic operators",
+    "logical operators",
+    "bitwise operators",
+    "operator precedence",
+    "assignment operators",
+    "C++ programming",
+    "relational operators",
+    "ternary operator"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/notes/cpp-programming/operators",
   },
@@ -26,14 +38,31 @@ export default function OperatorsPage() {
         </h1>
       </div>
 
-      <div className="prose prose-lg max-w-none space-y-6">
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">Types of Operators</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            C++ provides various types of operators to perform different operations on operands. 
-            Operators are symbols that tell the compiler to perform specific mathematical or logical operations.
+      {/* Introduction */}
+      <div className="prose prose-lg max-w-none space-y-6 mb-8">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+          <p className="text-gray-700 leading-relaxed mb-0">
+            Operators are the fundamental building blocks of C++ expressions. They allow you to perform calculations, make comparisons, 
+            manipulate bits, and control program flow. Understanding operators deeply is crucial because they appear in virtually every line 
+            of C++ code. From simple arithmetic to complex bit manipulations, operators enable you to express your logic concisely and efficiently.
           </p>
         </div>
+      </div>
+
+      <div className="prose prose-lg max-w-none space-y-8">
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Types of Operators</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            C++ provides various types of operators to perform different operations on operands. Operators are symbols that tell the compiler 
+            to perform specific mathematical or logical operations. C++ has a rich set of operators that can be categorized into several groups, 
+            each serving specific purposes in program development.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Understanding operator types helps you choose the right tool for each task. Some operators are used constantly (like arithmetic 
+            and assignment), while others are specialized (like bitwise operators for low-level programming). Mastery of operators is essential 
+            for writing efficient, readable, and correct C++ code.
+          </p>
+        </section>
 
         <div>
           <h2 className="text-2xl font-semibold text-gray-900 mb-3">1. Arithmetic Operators</h2>
@@ -332,9 +361,176 @@ int main() {
             <li>Assignment (=, +=, -=, etc.)</li>
           </ol>
           <p className="text-gray-700 leading-relaxed mt-3">
-            Use parentheses () to override precedence and make expressions clearer.
+            Use parentheses () to override precedence and make expressions clearer. When in doubt, use parentheses to ensure the intended 
+            order of evaluation and improve code readability.
           </p>
         </div>
+
+        {/* Summary Table */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Summary</h2>
+          <div className="overflow-x-auto mb-6">
+            <table className="min-w-full border-collapse border border-gray-300">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Topic</th>
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Key Points</th>
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Difficulty</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-700">
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Arithmetic Operators</td>
+                  <td className="border border-gray-300 px-4 py-3">+, -, *, /, %, ++, -- for mathematical operations</td>
+                  <td className="border border-gray-300 px-4 py-3">Beginner</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Relational Operators</td>
+                  <td className="border border-gray-300 px-4 py-3">==, !=, &gt;, &lt;, &gt;=, &lt;= for comparisons, return bool</td>
+                  <td className="border border-gray-300 px-4 py-3">Beginner</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Logical Operators</td>
+                  <td className="border border-gray-300 px-4 py-3">&amp;&amp;, ||, ! for combining conditions, short-circuit evaluation</td>
+                  <td className="border border-gray-300 px-4 py-3">Beginner</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Assignment Operators</td>
+                  <td className="border border-gray-300 px-4 py-3">=, +=, -=, *=, /=, %= for combined assignment and operation</td>
+                  <td className="border border-gray-300 px-4 py-3">Beginner</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Bitwise Operators</td>
+                  <td className="border border-gray-300 px-4 py-3">&amp;, |, ^, ~, &lt;&lt;, &gt;&gt; for bit-level manipulation</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Operator Precedence</td>
+                  <td className="border border-gray-300 px-4 py-3">Order of evaluation, use parentheses to override</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the difference between ++i and i++?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">++i</code> (pre-increment) increments i first, then returns the new value. 
+                <code className="bg-gray-100 px-1 rounded">i++</code> (post-increment) returns the current value first, then increments i. 
+                For standalone statements, both are equivalent, but in expressions: <code className="bg-gray-100 px-1 rounded">int x = ++i;</code> 
+                assigns incremented value, while <code className="bg-gray-100 px-1 rounded">int x = i++;</code> assigns original value.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: What is short-circuit evaluation in logical operators?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Short-circuit evaluation means the second operand is not evaluated if the result can be determined from the first. For 
+                <code className="bg-gray-100 px-1 rounded">a &amp;&amp; b</code>, if a is false, b is not evaluated. For 
+                <code className="bg-gray-100 px-1 rounded">a || b</code>, if a is true, b is not evaluated. This is useful for avoiding 
+                errors (e.g., checking pointer before dereferencing).
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: What is the difference between = and == operators?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">=</code> is the assignment operator (assigns value), while 
+                <code className="bg-gray-100 px-1 rounded">==</code> is the equality operator (compares values). Using = instead of == in 
+                conditions is a common error that assigns instead of comparing, often causing bugs. Modern compilers warn about this.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: When should I use bitwise operators?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Bitwise operators are used for low-level programming: setting/clearing flags, efficient multiplication/division by powers of 2 
+                (shift), cryptography, graphics programming, embedded systems, and optimizing certain algorithms. They operate on individual 
+                bits rather than entire values.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: What is operator associativity?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Associativity determines the order of evaluation when operators have the same precedence. Left-associative operators (most) 
+                evaluate left to right: <code className="bg-gray-100 px-1 rounded">a - b - c</code> = <code className="bg-gray-100 px-1 rounded">(a - b) - c</code>. 
+                Right-associative operators (assignment, ternary) evaluate right to left: <code className="bg-gray-100 px-1 rounded">a = b = c</code> 
+                = <code className="bg-gray-100 px-1 rounded">a = (b = c)</code>.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: Can I overload operators in C++?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Yes, C++ allows operator overloading for user-defined types (classes). You can define custom behavior for operators like +, -, 
+                *, /, ==, &lt;&lt;, etc. This enables intuitive syntax like <code className="bg-gray-100 px-1 rounded">vector1 + vector2</code>. 
+                Some operators cannot be overloaded (::, ., .*, ?:), and you cannot change operator precedence or number of operands.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: What happens when I divide by zero in C++?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Division by zero causes undefined behavior for integers (may crash or produce garbage). For floating-point numbers, division 
+                by zero may produce infinity (inf) or NaN (Not a Number). Always check for zero before division to prevent errors and ensure 
+                program stability.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: What is the ternary operator and when should I use it?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                The ternary operator <code className="bg-gray-100 px-1 rounded">? :</code> is a conditional operator: 
+                <code className="bg-gray-100 px-1 rounded">condition ? value_if_true : value_if_false</code>. Use it for simple conditional 
+                assignments when it improves readability, but avoid nested ternaries as they reduce clarity. It's more concise than if-else 
+                for simple cases.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Operators are fundamental to C++ programming, enabling you to perform calculations, make decisions, and manipulate data efficiently. 
+            Understanding the different types of operators, their precedence, and associativity is crucial for writing correct and efficient code.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            While most operators are straightforward, some require careful attention: the difference between = and ==, pre-increment vs post-increment, 
+            and operator precedence can cause subtle bugs. Always use parentheses when the order of evaluation is unclear, and be mindful of 
+            short-circuit evaluation in logical expressions.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            As you advance, you'll learn to leverage operator overloading to create intuitive interfaces for your classes, and use bitwise operators 
+            for performance-critical code. Mastery of operators forms the foundation for understanding more complex C++ features and writing 
+            professional-quality code.
+          </p>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/notes/cpp-programming/introduction" className="text-blue-600 hover:text-blue-700 underline">C++ Introduction</Link></li>
+              <li><Link href="/notes/cpp-programming/control-structures" className="text-blue-600 hover:text-blue-700 underline">C++ Control Structures</Link></li>
+              <li><Link href="/notes/cpp-programming/functions" className="text-blue-600 hover:text-blue-700 underline">C++ Functions</Link></li>
+              <li><Link href="/notes/cpp-programming/arrays" className="text-blue-600 hover:text-blue-700 underline">C++ Arrays</Link></li>
+              <li><Link href="/programming/c-language" className="text-blue-600 hover:text-blue-700 underline">C Language Basics</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
     </main>
   );

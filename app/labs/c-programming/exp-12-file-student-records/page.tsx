@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Experiment 12 – File Handling Student Records | C Programming Lab",
+  title: "Experiment 12 – File Handling for Student Records | C Programming Lab Manual",
   description:
-    "Store and retrieve student records from files in C programming. Learn file operations: fopen, fwrite, fread, fclose, and file modes.",
-  keywords: ["C programming", "file handling", "file operations", "fopen", "fwrite", "fread", "C lab"],
+    "Complete C programming lab experiment for file handling operations including storing and retrieving student records. Learn fopen, fwrite, fread, fclose, file modes, sample I/O, viva questions, and database applications.",
+  keywords: [
+    "C programming lab",
+    "file handling",
+    "file operations",
+    "fopen fwrite fread",
+    "C lab manual",
+    "data persistence",
+    "file I/O"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-12-file-student-records",
   },
@@ -36,9 +45,71 @@ export default function Exp12FileStudentRecordsPage() {
             Aim
           </h2>
           <div className="prose prose-slate max-w-none">
-            <p className="text-gray-700 leading-relaxed">
-              To implement file handling operations for storing and retrieving student records. Learn to write student data to a file and read it back using file operations in C programming.
+            <p className="text-gray-700 leading-relaxed mb-3">
+              To implement file handling operations for storing and retrieving student records. Learn to write student data to a file and read it back 
+              using file operations in C programming. This experiment helps students understand data persistence, file I/O operations, and how to 
+              maintain data beyond program execution.
             </p>
+            <p className="text-gray-700 leading-relaxed">
+              Through this experiment, students will learn to work with files, understand different file modes, implement error handling for file 
+              operations, and create programs that can store and retrieve data persistently.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Learning Outcomes
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              After completing this experiment, students will be able to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>Open files using fopen() with different modes (r, w, a, r+, w+, a+)</li>
+              <li>Write data to files using fprintf() or fwrite()</li>
+              <li>Read data from files using fscanf() or fread()</li>
+              <li>Check for file opening errors and handle them appropriately</li>
+              <li>Close files using fclose() to free resources</li>
+              <li>Understand the difference between text and binary file modes</li>
+              <li>Implement append mode to add records without overwriting</li>
+              <li>Create persistent data storage solutions</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Algorithm
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              The algorithm for file handling involves opening, writing/reading, and closing files:
+            </p>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Write to File Algorithm:</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                <li>Declare FILE pointer: <code className="bg-white px-1 rounded">FILE *fp</code></li>
+                <li>Open file: <code className="bg-white px-1 rounded">fp = fopen("filename.txt", "w" or "a")</code></li>
+                <li>Check if <code className="bg-white px-1 rounded">fp == NULL</code> (error opening)</li>
+                <li>If error, display message and exit</li>
+                <li>Input student data</li>
+                <li>Write to file: <code className="bg-white px-1 rounded">fprintf(fp, format, data)</code></li>
+                <li>Close file: <code className="bg-white px-1 rounded">fclose(fp)</code></li>
+              </ol>
+            </div>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Read from File Algorithm:</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                <li>Open file in read mode: <code className="bg-white px-1 rounded">fp = fopen("filename.txt", "r")</code></li>
+                <li>Check for errors (fp == NULL)</li>
+                <li>Loop while not end of file: <code className="bg-white px-1 rounded">while (!feof(fp))</code> or 
+                <code className="bg-white px-1 rounded">while (fscanf(...) != EOF)</code></li>
+                <li>Read data: <code className="bg-white px-1 rounded">fscanf(fp, format, &amp;variables)</code></li>
+                <li>Display read data</li>
+                <li>Close file</li>
+              </ol>
+            </div>
           </div>
         </section>
 
@@ -315,10 +386,110 @@ Roll No    Name                 Mark1    Mark2    Mark3    Total    Percentage
               <li><strong>Application State:</strong> Saving game progress, user preferences, session data</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-4">
-              Understanding file operations is crucial for building applications that need to store data beyond program execution. File handling enables data persistence, which is fundamental to most real-world applications.
+              Understanding file operations is crucial for building applications that need to store data beyond program execution. File handling enables 
+              data persistence, which is fundamental to most real-world applications. This knowledge forms the foundation for database systems, 
+              configuration management, logging, and data backup solutions.
             </p>
           </div>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Viva Questions
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: What are the different file modes in fopen() and when to use each?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                "r" - read mode (file must exist), "w" - write mode (creates/overwrites), "a" - append mode (creates/appends), "r+" - read/write 
+                (file must exist), "w+" - read/write (creates/overwrites), "a+" - read/append (creates/appends). Use "r" for reading, "w" for 
+                writing new files, "a" for adding to existing files without losing data.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: Why is it important to check if fopen() returns NULL?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                fopen() returns NULL if file cannot be opened (file doesn't exist, permission denied, disk full, etc.). Using NULL pointer causes 
+                segmentation fault or undefined behavior. Always check: <code className="bg-gray-100 px-1 rounded">if (fp == NULL) { /* handle error */ }</code>. 
+                This prevents crashes and allows graceful error handling.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: What is the difference between fprintf() and fwrite()?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">fprintf()</code> writes formatted text (human-readable), works with text files, converts 
+                data to text. <code className="bg-gray-100 px-1 rounded">fwrite()</code> writes raw binary data, works with binary files, writes 
+                data as-is. Use fprintf for text files (readable), fwrite for binary files (efficient, exact representation). fprintf is slower 
+                but portable, fwrite is faster but platform-dependent.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: Why should we always close files with fclose()?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                fclose() flushes buffers (ensures all data is written), releases file handle (allows other programs to access), and frees system 
+                resources. Not closing files can cause data loss (buffered data not written), resource leaks (file handles not released), and 
+                prevent other programs from accessing the file. Operating systems limit number of open files per process.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: What happens if we write to a file opened in read mode?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Attempting to write to a file opened in "r" mode causes undefined behavior or error. File opened in read mode is read-only. Use 
+                "r+" for read/write, "w" or "w+" for writing, or "a" for appending. Always use appropriate mode for intended operation to prevent 
+                errors and data corruption.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: How do we detect end of file when reading?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Use <code className="bg-gray-100 px-1 rounded">feof(fp)</code> which returns non-zero at end of file, or check return value of 
+                <code className="bg-gray-100 px-1 rounded">fscanf()</code> which returns EOF at end. Better approach: 
+                <code className="bg-gray-100 px-1 rounded">while (fscanf(fp, ...) != EOF)</code> because feof() only returns true after attempting 
+                to read past end. Check fscanf return value immediately after reading, not before.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: What is the difference between "w" and "a" modes?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                "w" (write) mode creates new file or truncates existing file (deletes all content), starts writing from beginning. "a" (append) mode 
+                creates new file or opens existing file, writes at end (preserves existing content). Use "w" when you want to overwrite, "a" when 
+                you want to add to existing data without losing it.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: Can we read and write to the same file in one program?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Yes, use "r+" (read/write, file must exist), "w+" (read/write, creates/overwrites), or "a+" (read/append, creates/appends). After 
+                writing, use <code className="bg-gray-100 px-1 rounded">fseek(fp, 0, SEEK_SET)</code> to move to beginning before reading. Be 
+                careful with file position - reading and writing share the same file pointer position.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/programming/c-language" className="text-blue-600 hover:text-blue-700 underline">C Language Basics</Link></li>
+              <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+              <li><Link href="/labs/c-programming/exp-11-structures-student" className="text-blue-600 hover:text-blue-700 underline">Experiment 11: Structures</Link></li>
+              <li><Link href="/labs/c-programming/exp-13-search-sort" className="text-blue-600 hover:text-blue-700 underline">Experiment 13: Search & Sort</Link></li>
+              <li><Link href="/programming/c-language/important-programs" className="text-blue-600 hover:text-blue-700 underline">Important C Programs</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between gap-4">

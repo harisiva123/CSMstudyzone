@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Inheritance in C++ – C++ Programming Notes",
+  title: "Inheritance in C++ – Complete Guide with Examples | C++ Notes",
   description:
-    "Learn about single, multiple, multilevel, hierarchical, and hybrid inheritance in C++. Understand base classes, derived classes, and access specifiers.",
-  keywords: ["C++ inheritance", "base class", "derived class", "multiple inheritance", "C++ polymorphism"],
+    "Comprehensive guide to inheritance in C++ covering single, multiple, multilevel, hierarchical, and hybrid inheritance. Learn base classes, derived classes, access specifiers, function overriding, and constructor/destructor order.",
+  keywords: [
+    "C++ inheritance",
+    "base class",
+    "derived class",
+    "multiple inheritance",
+    "multilevel inheritance",
+    "hierarchical inheritance",
+    "function overriding",
+    "access specifiers",
+    "C++ OOP"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/notes/cpp-programming/inheritance",
   },
@@ -26,14 +37,37 @@ export default function InheritancePage() {
         </h1>
       </div>
 
-      <div className="prose prose-lg max-w-none space-y-6">
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">Introduction</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Inheritance is a mechanism where a new class (derived class) is created from an existing class (base class). 
-            The derived class inherits all the properties and behaviors of the base class, promoting code reusability.
+      {/* Introduction */}
+      <div className="prose prose-lg max-w-none space-y-6 mb-8">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+          <p className="text-gray-700 leading-relaxed mb-0">
+            Inheritance is one of the four fundamental pillars of object-oriented programming, enabling code reuse and creating hierarchical 
+            relationships between classes. It allows you to create new classes based on existing ones, inheriting their attributes and methods 
+            while adding new functionality or modifying existing behavior. This powerful mechanism reduces code duplication, improves maintainability, 
+            and enables the creation of more organized, scalable software systems.
           </p>
         </div>
+      </div>
+
+      <div className="prose prose-lg max-w-none space-y-8">
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Introduction to Inheritance</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Inheritance is a mechanism where a new class (derived class) is created from an existing class (base class). The derived class inherits 
+            all the properties and behaviors of the base class, promoting code reusability. This relationship is often described as an "is-a" 
+            relationship - for example, a Dog "is-a" Animal, or a Car "is-a" Vehicle.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The base class (also called parent class or superclass) contains common features shared by multiple classes. The derived class (also called 
+            child class or subclass) inherits these features and can add its own unique characteristics. This creates a natural hierarchy that models 
+            real-world relationships and makes code more intuitive and maintainable.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Inheritance enables polymorphism, where objects of different derived classes can be treated uniformly through their common base class. 
+            This is essential for building flexible, extensible software systems that can grow and adapt to changing requirements without major 
+            restructuring of existing code.
+          </p>
+        </section>
 
         <div>
           <h2 className="text-2xl font-semibold text-gray-900 mb-3">Syntax</h2>
@@ -345,6 +379,174 @@ int main() {
     return 0;
 }`}</code></pre>
         </div>
+
+        {/* Summary Table */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Summary</h2>
+          <div className="overflow-x-auto mb-6">
+            <table className="min-w-full border-collapse border border-gray-300">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Topic</th>
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Key Points</th>
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Difficulty</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-700">
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Single Inheritance</td>
+                  <td className="border border-gray-300 px-4 py-3">One base class, one derived class, simplest form</td>
+                  <td className="border border-gray-300 px-4 py-3">Beginner</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Multiple Inheritance</td>
+                  <td className="border border-gray-300 px-4 py-3">Derived class inherits from multiple base classes, can cause ambiguity</td>
+                  <td className="border border-gray-300 px-4 py-3">Advanced</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Multilevel Inheritance</td>
+                  <td className="border border-gray-300 px-4 py-3">Chain of inheritance, A→B→C, creates inheritance hierarchy</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Hierarchical Inheritance</td>
+                  <td className="border border-gray-300 px-4 py-3">Multiple derived classes from one base, common base shared</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Hybrid Inheritance</td>
+                  <td className="border border-gray-300 px-4 py-3">Combination of multiple types, may require virtual inheritance</td>
+                  <td className="border border-gray-300 px-4 py-3">Advanced</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Access Specifiers</td>
+                  <td className="border border-gray-300 px-4 py-3">public/protected/private inheritance control member visibility</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Constructor/Destructor Order</td>
+                  <td className="border border-gray-300 px-4 py-3">Base constructor first, derived last; destructors reverse order</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the difference between public, protected, and private inheritance?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Public inheritance: base class public members become public in derived, protected become protected. Protected inheritance: both public 
+                and protected become protected. Private inheritance: both become private. Public inheritance is most common (is-a relationship), 
+                private inheritance is rarely used (implementation inheritance).
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: What is the diamond problem in multiple inheritance?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Diamond problem occurs when a class inherits from two classes that both inherit from the same base class, creating ambiguity. 
+                For example, D inherits from B and C, both of which inherit from A. D would have two copies of A's members. Solution: use virtual 
+                inheritance (virtual keyword in inheritance declaration) to ensure only one copy of the base class.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: Can a derived class access private members of the base class?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                No, private members of the base class are not accessible in the derived class, regardless of inheritance type. They remain private 
+                to the base class. To allow derived classes to access members while keeping them hidden from external code, use protected access 
+                specifier instead of private.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: What is function overriding and how is it different from overloading?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Function overriding occurs when a derived class defines a function with the same signature as a base class function, replacing the 
+                base implementation. Overloading is having multiple functions with the same name but different signatures in the same scope. 
+                Overriding requires inheritance, overloading doesn't. Use virtual keyword for runtime polymorphism with overriding.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: Why are base class constructors called before derived class constructors?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Base class must be fully constructed before derived class can be constructed, because derived class may depend on base class members. 
+                This ensures base class is in a valid state before derived class initialization. Destructors are called in reverse order (derived 
+                first, then base) to ensure proper cleanup.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: Can I prevent a class from being inherited?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                In C++11+, you can use the <code className="bg-gray-100 px-1 rounded">final</code> keyword: <code className="bg-gray-100 px-1 rounded">class Base final { };</code> 
+                prevents any class from inheriting from Base. You can also mark specific functions as final to prevent overriding. This is useful 
+                for ensuring certain classes or methods cannot be modified through inheritance.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: What is the difference between inheritance and composition?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Inheritance represents "is-a" relationship (Dog is-a Animal), while composition represents "has-a" relationship (Car has-a Engine). 
+                Inheritance: derived class is a type of base class. Composition: class contains another class as a member. Prefer composition when 
+                you need functionality, inheritance when you need polymorphism. Composition is more flexible and less coupled.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: How do I call a base class function from a derived class?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Use scope resolution operator: <code className="bg-gray-100 px-1 rounded">BaseClass::functionName()</code>. For example, if Derived 
+                overrides a function but wants to call the base version: <code className="bg-gray-100 px-1 rounded">Base::display()</code>. This 
+                is useful when overriding functions but still needing the base class functionality, or when resolving ambiguity in multiple inheritance.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Inheritance is a fundamental OOP concept that enables code reuse, hierarchical organization, and polymorphism. Understanding different 
+            types of inheritance helps you design better class hierarchies that model real-world relationships accurately. Single and hierarchical 
+            inheritance are most common, while multiple inheritance requires careful design to avoid ambiguity.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Access specifiers in inheritance control how base class members are accessible in derived classes, providing fine-grained control over 
+            encapsulation. Constructor and destructor order ensures proper initialization and cleanup, with base classes always constructed first 
+            and destroyed last.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Mastery of inheritance is essential for building complex, maintainable C++ applications. Combined with polymorphism, inheritance enables 
+            powerful design patterns and flexible software architectures. As you progress, you'll learn to balance inheritance with composition, 
+            choosing the right relationship type for each design situation.
+          </p>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/notes/cpp-programming/oop" className="text-blue-600 hover:text-blue-700 underline">C++ Object-Oriented Programming</Link></li>
+              <li><Link href="/notes/cpp-programming/polymorphism" className="text-blue-600 hover:text-blue-700 underline">C++ Polymorphism</Link></li>
+              <li><Link href="/notes/cpp-programming/structures" className="text-blue-600 hover:text-blue-700 underline">C++ Structures</Link></li>
+              <li><Link href="/notes/cpp-programming/functions" className="text-blue-600 hover:text-blue-700 underline">C++ Functions</Link></li>
+              <li><Link href="/notes/cpp-programming/introduction" className="text-blue-600 hover:text-blue-700 underline">C++ Introduction</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
     </main>
   );

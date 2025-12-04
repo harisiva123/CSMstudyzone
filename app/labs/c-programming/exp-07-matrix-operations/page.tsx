@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Experiment 7 – Matrix Operations | C Programming Lab",
+  title: "Experiment 7 – Matrix Operations (Addition, Subtraction, Multiplication) | C Programming Lab Manual",
   description:
-    "Perform addition, subtraction, and multiplication of matrices in C programming. Learn 2D arrays and nested loops.",
-  keywords: ["C programming", "matrices", "2D arrays", "matrix operations", "C lab"],
+    "Complete C programming lab experiment for matrix operations including addition, subtraction, and multiplication. Includes algorithm, flowchart, code with dimension validation, sample I/O, viva questions, and applications in graphics and ML.",
+  keywords: [
+    "C programming lab",
+    "matrix operations",
+    "2D arrays",
+    "matrix addition",
+    "matrix multiplication",
+    "C lab manual",
+    "nested loops",
+    "matrix programming"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-07-matrix-operations",
   },
@@ -36,9 +46,90 @@ export default function Exp07MatrixOperationsPage() {
             Aim
           </h2>
           <div className="prose prose-slate max-w-none">
-            <p className="text-gray-700 leading-relaxed">
-              To perform matrix operations (addition, subtraction, and multiplication) on two matrices using 2D arrays and nested loops in C programming.
+            <p className="text-gray-700 leading-relaxed mb-3">
+              To perform matrix operations (addition, subtraction, and multiplication) on two matrices using 2D arrays and nested loops in C programming. 
+              This experiment helps students understand 2D arrays, nested loop structures, and mathematical operations on matrices.
             </p>
+            <p className="text-gray-700 leading-relaxed">
+              Through this experiment, students will learn to work with multidimensional arrays, implement matrix algorithms, validate matrix dimensions 
+              for operations, and understand the complexity of matrix multiplication.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Learning Outcomes
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              After completing this experiment, students will be able to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>Declare and initialize 2D arrays (matrices)</li>
+              <li>Read and display matrices using nested loops</li>
+              <li>Understand matrix dimension requirements for different operations</li>
+              <li>Implement matrix addition and subtraction (same dimensions required)</li>
+              <li>Implement matrix multiplication (cols1 = rows2)</li>
+              <li>Validate matrix dimensions before performing operations</li>
+              <li>Use three nested loops for matrix multiplication</li>
+              <li>Format matrix output for readability</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Algorithm
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              The algorithm for matrix operations depends on the operation type. Here are the algorithms for each:
+            </p>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Matrix Addition/Subtraction Algorithm:</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                <li>Read dimensions (rows, cols) of both matrices</li>
+                <li>Validate: rows1 == rows2 AND cols1 == cols2</li>
+                <li>Read elements of matrix1 and matrix2</li>
+                <li>For each position (i, j):
+                  <ul className="list-disc list-inside ml-6 mt-1">
+                    <li>Addition: result[i][j] = matrix1[i][j] + matrix2[i][j]</li>
+                    <li>Subtraction: result[i][j] = matrix1[i][j] - matrix2[i][j]</li>
+                  </ul>
+                </li>
+                <li>Display result matrix</li>
+              </ol>
+            </div>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Matrix Multiplication Algorithm:</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                <li>Read dimensions: matrix1 (rows1 × cols1), matrix2 (rows2 × cols2)</li>
+                <li>Validate: cols1 == rows2 (required for multiplication)</li>
+                <li>Read elements of both matrices</li>
+                <li>For each row i in matrix1 (0 to rows1-1):
+                  <ul className="list-disc list-inside ml-6 mt-1">
+                    <li>For each column j in matrix2 (0 to cols2-1):
+                      <ul className="list-disc list-inside ml-6 mt-1">
+                        <li>Initialize result[i][j] = 0</li>
+                        <li>For k from 0 to cols1-1:
+                          <ul className="list-disc list-inside ml-6 mt-1">
+                            <li>result[i][j] += matrix1[i][k] * matrix2[k][j]</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Result matrix dimensions: rows1 × cols2</li>
+                <li>Display result matrix</li>
+              </ol>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+              <p className="text-gray-700 text-sm">
+                <strong>Key Formula:</strong> For matrix multiplication, element result[i][j] is the dot product of row i of matrix1 and column j of matrix2.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -286,10 +377,101 @@ Enter choice: 3`}</pre>
               <li><strong>Robotics:</strong> Kinematics calculations, coordinate transformations</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-4">
-              Understanding 2D arrays and nested loops is crucial for working with matrices, which are essential data structures in advanced programming and computational mathematics.
+              Understanding 2D arrays and nested loops is crucial for working with matrices, which are essential data structures in advanced programming 
+              and computational mathematics. Matrix operations are fundamental in computer graphics, machine learning, scientific computing, and many other 
+              fields where mathematical computations are performed on structured data.
             </p>
           </div>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Viva Questions
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: What are the dimension requirements for matrix addition and subtraction?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Both matrices must have the same dimensions (same number of rows and same number of columns). For example, a 3×4 matrix can only be added 
+                or subtracted with another 3×4 matrix. The result will also be 3×4.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: What are the dimension requirements for matrix multiplication?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                The number of columns in the first matrix must equal the number of rows in the second matrix. If matrix1 is m×n and matrix2 is p×q, 
+                then n must equal p. The result will be m×q. For example, 2×3 × 3×4 = 2×4.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: Why do we need three nested loops for matrix multiplication?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Three loops are needed: outer loop (i) for rows of result, middle loop (j) for columns of result, inner loop (k) to compute dot product. 
+                The inner loop multiplies each element of row i in matrix1 with corresponding element of column j in matrix2 and sums them up.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: Is matrix multiplication commutative? (A × B = B × A?)</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                No, matrix multiplication is not commutative in general. A × B ≠ B × A (unless both are square and commute). Even dimensions may differ: 
+                if A is 2×3 and B is 3×4, then A×B is 2×4, but B×A is undefined (3×4 × 2×3 is invalid). Always check dimension compatibility.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: What is the time complexity of matrix multiplication?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                For two n×n matrices, naive multiplication is O(n³) because we have three nested loops each running n times. More efficient algorithms 
+                like Strassen's algorithm achieve O(n^2.81), but for learning purposes, the O(n³) algorithm is standard and easier to understand.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: How do you access elements in a 2D array?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Use two indices: <code className="bg-gray-100 px-1 rounded">arr[row][col]</code>. First index is row, second is column. Both start from 0. 
+                For a matrix declared as <code className="bg-gray-100 px-1 rounded">int matrix[10][10]</code>, valid indices are 0-9 for both dimensions.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: Can we perform matrix operations without storing the entire matrix in memory?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                For very large matrices, you might use sparse matrix representations (only store non-zero elements) or process elements on-the-fly without 
+                storing full matrices. However, for standard operations, storing matrices in 2D arrays is the most straightforward and efficient approach 
+                for matrices that fit in memory.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: What happens if we try to multiply incompatible matrices?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Matrix multiplication is undefined if columns of first matrix ≠ rows of second matrix. The program should validate dimensions and display 
+                an error message. Attempting to multiply incompatible matrices would lead to incorrect results or array index out of bounds errors.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/programming/c-language" className="text-blue-600 hover:text-blue-700 underline">C Language Basics</Link></li>
+              <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+              <li><Link href="/labs/c-programming/exp-06-array-stats" className="text-blue-600 hover:text-blue-700 underline">Experiment 6: Array Statistics</Link></li>
+              <li><Link href="/labs/c-programming/exp-08-string-operations" className="text-blue-600 hover:text-blue-700 underline">Experiment 8: String Operations</Link></li>
+              <li><Link href="/programming/c-language/important-programs" className="text-blue-600 hover:text-blue-700 underline">Important C Programs</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between gap-4">

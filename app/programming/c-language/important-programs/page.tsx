@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Important C Programs for Practice | CSM Study Zone",
-  description: "Practice essential C programs including Fibonacci series, prime numbers, palindrome, factorial, Armstrong numbers, matrix operations, searching, sorting algorithms, and file handling examples.",
-  keywords: ["C programs", "C examples", "CSM Study Zone", "C practice programs", "C algorithms", "C programming examples", "data structures C", "C lab programs"],
+  title: "Important C Programs for Practice – Complete Examples with Solutions | CSM Study Zone",
+  description: "Comprehensive collection of essential C programs including Fibonacci series, prime numbers, palindrome, factorial, Armstrong numbers, matrix operations, searching, sorting algorithms, file handling, and pointer programs with complete code examples.",
+  keywords: [
+    "C programs",
+    "C examples",
+    "C practice programs",
+    "C algorithms",
+    "C programming examples",
+    "data structures C",
+    "C lab programs",
+    "C code examples"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/programming/c-language/important-programs",
   },
@@ -1015,6 +1025,154 @@ int main() {
           </ul>
         </div>
       </section>
+
+      {/* Summary Table */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Program Categories Summary</h2>
+        <div className="overflow-x-auto mb-6">
+          <table className="min-w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Category</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Programs</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Difficulty</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Number-based</td>
+                <td className="border border-gray-300 px-4 py-3">Fibonacci, Prime, Palindrome, Factorial, Armstrong</td>
+                <td className="border border-gray-300 px-4 py-3">Easy to Medium</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Array & Matrix</td>
+                <td className="border border-gray-300 px-4 py-3">Matrix Addition/Multiplication, Linear/Binary Search, Bubble/Selection Sort</td>
+                <td className="border border-gray-300 px-4 py-3">Medium to Hard</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">File Handling</td>
+                <td className="border border-gray-300 px-4 py-3">Writing to File, Reading from File</td>
+                <td className="border border-gray-300 px-4 py-3">Medium</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Pointers & Structures</td>
+                <td className="border border-gray-300 px-4 py-3">Swapping using Pointers, Array using Pointers</td>
+                <td className="border border-gray-300 px-4 py-3">Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
+        <div className="space-y-4 mb-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q1: How should I practice these programs?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Start with easy programs (Fibonacci, factorial), understand the logic, then move to medium difficulty. Don't copy-paste - type code 
+              yourself to learn. Dry run programs on paper first, then code. Modify programs (e.g., print even Fibonacci numbers, find primes in range). 
+              Practice regularly, solve variations, and combine concepts.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q2: Which programs are most important for exams?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              All programs are important, but focus on: array operations (searching, sorting), string manipulation, matrix operations, file handling, 
+              and structure programs. These appear frequently in exams. Also practice number-based programs (prime, palindrome, factorial) as they 
+              test fundamental concepts.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q3: How do I debug programs that don't work?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Add printf statements to check variable values at different points. Verify input is correct. Check array bounds, pointer initialization, 
+              and loop conditions. Use compiler warnings (-Wall -Wextra). Trace through code manually. Start with simple test cases. Use debugger (GDB) 
+              for complex issues. Check for common errors: missing semicolons, wrong operators, off-by-one errors.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q4: Should I memorize these programs?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Don't memorize - understand the logic and algorithm. Once you understand how a program works, you can write it from scratch. Focus on 
+              understanding patterns: how loops work, how arrays are traversed, how conditions are checked. Understanding enables you to solve 
+              variations and new problems.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q5: How can I improve my programming speed?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Practice regularly - code daily. Start with simple programs and gradually increase complexity. Learn common patterns and algorithms. 
+              Type code yourself (don't copy-paste). Practice writing code on paper for exams. Time yourself while coding. Review and refactor your 
+              code. The more you practice, the faster you become.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q6: What's the difference between iterative and recursive solutions?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Iterative uses loops, recursive uses function calls. Iterative is usually faster and uses less memory. Recursive is more elegant for 
+              some problems (tree traversal, divide-and-conquer) but can cause stack overflow for large inputs. Practice both - understand when to 
+              use each. Many problems can be solved either way.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q7: How do I prepare for lab exams with these programs?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Practice writing complete, working programs from scratch. Time yourself. Practice explaining your code. Understand algorithms, not just 
+              syntax. Be able to modify programs (e.g., change sorting order, add features). Practice debugging. Review common errors. Be confident 
+              with array operations, string functions, and file handling.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q8: Can I use these programs in my projects?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Yes, but modify and adapt them for your needs. Add error checking, input validation, and proper documentation. Combine multiple programs 
+              to create larger applications. Use these as building blocks. For example, combine file handling with structures to create a student 
+              management system. Always understand the code before using it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Conclusion */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          These programs cover fundamental C programming concepts that are essential for any programmer. Mastering these programs provides a strong 
+          foundation for more advanced programming and problem-solving. Each program demonstrates important concepts and algorithms used in real-world 
+          applications.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Regular practice is key to becoming proficient in C programming. Don't just read these programs - write them yourself, modify them, and 
+          create variations. Understanding the logic behind each program is more important than memorizing code. As you practice, you'll develop 
+          problem-solving skills and programming intuition that will help you tackle new challenges.
+        </p>
+      </section>
+
+      {/* Internal Linking */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+            <li><Link href="/programming/c-language/programming-tips" className="text-blue-600 hover:text-blue-700 underline">C Programming Tips</Link></li>
+            <li><Link href="/programming/c-language/viva-questions" className="text-blue-600 hover:text-blue-700 underline">C Viva Questions</Link></li>
+            <li><Link href="/labs/c-programming" className="text-blue-600 hover:text-blue-700 underline">C Programming Lab Manual</Link></li>
+            <li><Link href="/programming/c-language/debugging" className="text-blue-600 hover:text-blue-700 underline">C Debugging Guide</Link></li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Footer Block */}
+      <PageFooterBlock />
     </main>
   );
 }

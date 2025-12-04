@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Experiment 1 – Basic I/O and Arithmetic | C Programming Lab",
+  title: "Experiment 1 – Basic I/O and Arithmetic Operations | C Programming Lab Manual",
   description:
-    "Learn basic input/output operations and arithmetic calculations in C programming. Practice using printf, scanf, and perform basic mathematical operations.",
-  keywords: ["C programming", "basic I/O", "arithmetic operations", "printf", "scanf", "C lab"],
+    "Complete C programming lab experiment covering basic input/output operations using printf and scanf, and arithmetic calculations. Includes algorithm, flowchart, code, sample I/O, viva questions, and real-world applications.",
+  keywords: [
+    "C programming lab",
+    "basic I/O",
+    "printf scanf",
+    "arithmetic operations",
+    "C lab manual",
+    "input output in C",
+    "C programming basics"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-01-basic-io",
   },
@@ -40,9 +49,63 @@ export default function Exp01BasicIOPage() {
             Aim
           </h2>
           <div className="prose prose-slate max-w-none">
-            <p className="text-gray-700 leading-relaxed">
-              To understand and implement basic input/output operations in C programming using <code className="bg-gray-100 px-1.5 py-0.5 rounded">printf()</code> and <code className="bg-gray-100 px-1.5 py-0.5 rounded">scanf()</code> functions, and to perform basic arithmetic operations (addition, subtraction, multiplication, division, and modulus) on user-input values.
+            <p className="text-gray-700 leading-relaxed mb-3">
+              To understand and implement basic input/output operations in C programming using <code className="bg-gray-100 px-1.5 py-0.5 rounded">printf()</code> and <code className="bg-gray-100 px-1.5 py-0.5 rounded">scanf()</code> functions, and to perform basic arithmetic operations (addition, subtraction, multiplication, division, and modulus) on user-input values. This experiment introduces fundamental programming concepts that form the foundation for all C programming.
             </p>
+            <p className="text-gray-700 leading-relaxed">
+              Through this experiment, students will learn to interact with users through console I/O, understand format specifiers, and perform basic mathematical computations using C operators.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Learning Outcomes
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              After completing this experiment, students will be able to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>Use <code className="bg-gray-100 px-1 rounded">printf()</code> for formatted output with various format specifiers</li>
+              <li>Use <code className="bg-gray-100 px-1 rounded">scanf()</code> for reading user input with proper format specifiers</li>
+              <li>Understand and use arithmetic operators (+, -, *, /, %)</li>
+              <li>Handle different data types (int, float, double) in I/O operations</li>
+              <li>Write programs that interact with users through console</li>
+              <li>Perform basic mathematical calculations in C programs</li>
+              <li>Understand the importance of format specifiers in I/O operations</li>
+              <li>Debug common I/O errors like missing &amp; in scanf or wrong format specifiers</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Algorithm
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              The algorithm for basic I/O and arithmetic operations involves reading input, performing calculations, and displaying results:
+            </p>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Algorithm Steps:</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                <li><strong>Start:</strong> Begin program execution</li>
+                <li><strong>Include Header:</strong> Include <code className="bg-white px-1 rounded">stdio.h</code> for I/O functions</li>
+                <li><strong>Declare Variables:</strong> Declare variables for two numbers and results (sum, diff, prod, quot, mod)</li>
+                <li><strong>Display Prompt:</strong> Use <code className="bg-white px-1 rounded">printf()</code> to ask user for first number</li>
+                <li><strong>Read Input:</strong> Use <code className="bg-white px-1 rounded">scanf()</code> to read first number into variable</li>
+                <li><strong>Display Prompt:</strong> Use <code className="bg-white px-1 rounded">printf()</code> to ask user for second number</li>
+                <li><strong>Read Input:</strong> Use <code className="bg-white px-1 rounded">scanf()</code> to read second number</li>
+                <li><strong>Calculate Sum:</strong> sum = a + b</li>
+                <li><strong>Calculate Difference:</strong> diff = a - b</li>
+                <li><strong>Calculate Product:</strong> prod = a * b</li>
+                <li><strong>Calculate Quotient:</strong> quot = a / b (use type casting for float division)</li>
+                <li><strong>Calculate Modulus:</strong> mod = a % b</li>
+                <li><strong>Display Results:</strong> Use <code className="bg-white px-1 rounded">printf()</code> to display all results with appropriate format specifiers</li>
+                <li><strong>Stop:</strong> End program execution</li>
+              </ol>
+            </div>
           </div>
         </section>
 
@@ -209,10 +272,105 @@ Modulus: 100 % 7 = 2`}</pre>
               <li><strong>E-commerce:</strong> Computing prices, discounts, taxes, and totals in shopping applications</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-4">
-              Mastery of input/output operations and arithmetic is crucial as these are used in virtually every program you will write.
+              Mastery of input/output operations and arithmetic is crucial as these are used in virtually every program you will write. 
+              Understanding format specifiers and proper I/O handling prevents common errors and makes your programs more robust and user-friendly.
             </p>
           </div>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Viva Questions
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the difference between printf() and scanf()?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">printf()</code> is used for formatted output (displaying data), while 
+                <code className="bg-gray-100 px-1 rounded">scanf()</code> is used for formatted input (reading data). printf() doesn't require 
+                &amp; before variables, but scanf() requires &amp; (address operator) before variables (except arrays/strings) to store input values.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: Why do we use &amp; in scanf() but not in printf()?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">scanf()</code> needs the memory address of variables to store input values, so we use 
+                &amp; (address operator). <code className="bg-gray-100 px-1 rounded">printf()</code> only needs the value to display, so no &amp; is needed. 
+                Arrays and strings are exceptions because their name represents the address.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: What are format specifiers? List common ones.</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Format specifiers tell printf/scanf how to interpret data. Common ones: <code className="bg-gray-100 px-1 rounded">%d</code> (int), 
+                <code className="bg-gray-100 px-1 rounded">%f</code> (float), <code className="bg-gray-100 px-1 rounded">%lf</code> (double), 
+                <code className="bg-gray-100 px-1 rounded">%c</code> (char), <code className="bg-gray-100 px-1 rounded">%s</code> (string), 
+                <code className="bg-gray-100 px-1 rounded">%u</code> (unsigned int). Using wrong specifiers causes undefined behavior.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: What is the difference between / and % operators?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">/</code> (division) returns the quotient (result of division), while 
+                <code className="bg-gray-100 px-1 rounded">%</code> (modulus) returns the remainder. For example: 15 / 4 = 3, 15 % 4 = 3. 
+                Modulus only works with integer operands.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: Why do we use type casting in division (float)a / b?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                When dividing two integers, C performs integer division (truncates decimal part). Type casting one operand to float ensures 
+                floating-point division, giving accurate decimal results. Without casting, 15 / 4 = 3, but (float)15 / 4 = 3.75.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: What happens if we divide by zero in C?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Division by zero causes undefined behavior. For integers, it may crash or produce garbage. For floats, it may produce 
+                infinity (inf) or NaN (Not a Number). Always check for zero before division to prevent errors.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: Can we use scanf() to read multiple values in one statement?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Yes, scanf() can read multiple values: <code className="bg-gray-100 px-1 rounded">scanf("%d %d", &amp;a, &amp;b);</code>. 
+                Values can be separated by spaces, tabs, or newlines. The format string should match the input format for reliable reading.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: What is the return value of printf() and scanf()?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">printf()</code> returns the number of characters printed (or negative on error). 
+                <code className="bg-gray-100 px-1 rounded">scanf()</code> returns the number of successfully read items (or EOF on end of file). 
+                These return values can be used for error checking.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/programming/c-language" className="text-blue-600 hover:text-blue-700 underline">C Language Basics</Link></li>
+              <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+              <li><Link href="/labs/c-programming/exp-02-largest-of-three" className="text-blue-600 hover:text-blue-700 underline">Experiment 2: Largest of Three Numbers</Link></li>
+              <li><Link href="/labs/c-programming/exp-03-factorial" className="text-blue-600 hover:text-blue-700 underline">Experiment 3: Factorial</Link></li>
+              <li><Link href="/programming/c-language/debugging" className="text-blue-600 hover:text-blue-700 underline">C Debugging Guide</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
 
       {/* Navigation Footer */}

@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Full C Language Notes – Unit-wise | CSM Study Zone",
-  description: "Comprehensive unit-wise C programming notes covering basics, tokens, data types, operators, control statements, loops, arrays, strings, functions, pointers, structures, unions, file handling, and command line arguments.",
-  keywords: ["C language notes", "C programming notes", "CSM Study Zone", "unit-wise C notes", "C complete notes", "C syllabus notes", "B.Tech CSM C notes"],
+  title: "Full C Language Notes – Complete Unit-wise Study Guide | CSM Study Zone",
+  description: "Comprehensive unit-wise C programming notes covering basics, tokens, data types, operators, control statements, loops, arrays, strings, functions, pointers, structures, unions, file handling, dynamic memory, and command line arguments with examples.",
+  keywords: [
+    "C language notes",
+    "C programming notes",
+    "unit-wise C notes",
+    "C complete notes",
+    "C syllabus notes",
+    "B.Tech CSM C notes",
+    "C study material",
+    "C programming guide"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/programming/c-language/full-notes",
   },
@@ -703,6 +713,159 @@ ptr = NULL;`}</code></pre>
           Use these notes along with practice questions and lab exercises. Regular practice is key to mastering C programming.
         </p>
       </div>
+
+      {/* Summary Table */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Unit Summary</h2>
+        <div className="overflow-x-auto mb-6">
+          <table className="min-w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Unit</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Topics Covered</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Difficulty</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Unit 1</td>
+                <td className="border border-gray-300 px-4 py-3">Basics, Tokens, Data Types, Variables, Constants, Operators</td>
+                <td className="border border-gray-300 px-4 py-3">Beginner</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Unit 2</td>
+                <td className="border border-gray-300 px-4 py-3">Control Statements, Loops, Loop Control</td>
+                <td className="border border-gray-300 px-4 py-3">Beginner</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Unit 3</td>
+                <td className="border border-gray-300 px-4 py-3">Arrays, Strings, Functions, Recursion</td>
+                <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Unit 4</td>
+                <td className="border border-gray-300 px-4 py-3">Pointers, Structures, Unions</td>
+                <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Unit 5</td>
+                <td className="border border-gray-300 px-4 py-3">File Handling, Dynamic Memory, Command Line Arguments</td>
+                <td className="border border-gray-300 px-4 py-3">Advanced</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
+        <div className="space-y-4 mb-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the best way to study C programming?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Start with basics (Unit 1), understand each concept thoroughly before moving forward. Practice coding for each topic. Write programs 
+              yourself rather than copying. Review regularly, solve practice questions, and work through lab exercises. Build small projects to apply 
+              concepts. Regular practice and hands-on coding are essential.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q2: Which unit is most important for exams?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              All units are important, but Unit 3 (Arrays, Strings, Functions) and Unit 4 (Pointers, Structures) are typically heavily weighted 
+              in exams. Pointers and structures are fundamental concepts that appear in many questions. However, don't skip any unit as concepts 
+              build upon each other.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q3: How do I remember all the syntax and functions?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Practice regularly - write code daily. Don't try to memorize everything at once. Focus on understanding concepts first. Syntax 
+              becomes natural with practice. Keep a reference handy while learning. Create cheat sheets for commonly used functions. Most importantly, 
+              write code yourself rather than just reading.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q4: What is the difference between structure and union?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Structure allocates separate memory for each member (size = sum of all members). Union shares memory among members (size = largest 
+              member). All structure members can be accessed simultaneously, but only one union member is active at a time. Use structures for 
+              grouping related data, unions for memory-efficient storage when only one member is needed.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q5: Why are pointers considered difficult?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Pointers involve indirect memory access, which can be abstract. Understanding address vs value, pointer arithmetic, and memory 
+              management requires practice. Start with simple examples, draw memory diagrams, and practice with small programs. Once you understand 
+              that pointers store addresses, concepts become clearer. Practice is key to mastering pointers.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q6: How important is file handling in C?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              File handling is essential for real-world applications. It enables data persistence, reading configurations, logging, and data 
+              processing. While basic programs may not need files, most practical applications require file I/O. Understanding file operations is 
+              crucial for building complete applications. Practice reading and writing both text and binary files.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q7: What should I focus on for lab exams?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Focus on writing complete, working programs. Practice common programs: array operations, string manipulation, matrix operations, 
+              searching/sorting, file handling, and structure programs. Understand algorithms, be able to explain your code, and practice debugging. 
+              Time management is important - practice writing code quickly and correctly.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q8: How do I prepare for viva questions?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Understand concepts deeply, not just syntax. Be able to explain why things work, not just how. Practice explaining with examples. 
+              Review common viva questions, understand memory management, pointers, and compilation process. Be ready to write small code snippets 
+              and explain your lab programs. Practice explaining concepts in your own words.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Conclusion */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          C programming is a fundamental language that forms the basis for many other programming languages and systems programming. Mastering C 
+          provides a strong foundation for understanding computer systems, memory management, and low-level programming concepts. The concepts covered 
+          in these units are essential for any computer science student.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Regular practice, understanding concepts deeply, and building projects are key to mastering C programming. Don't rush through topics - 
+          take time to understand each concept thoroughly. Use these notes as a reference, but always practice coding yourself. Combine theoretical 
+          knowledge with hands-on practice for the best learning experience.
+        </p>
+      </section>
+
+      {/* Internal Linking */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li><Link href="/programming/c-language/viva-questions" className="text-blue-600 hover:text-blue-700 underline">C Viva Questions</Link></li>
+            <li><Link href="/programming/c-language/important-programs" className="text-blue-600 hover:text-blue-700 underline">Important C Programs</Link></li>
+            <li><Link href="/programming/c-language/programming-tips" className="text-blue-600 hover:text-blue-700 underline">C Programming Tips</Link></li>
+            <li><Link href="/labs/c-programming" className="text-blue-600 hover:text-blue-700 underline">C Programming Lab Manual</Link></li>
+            <li><Link href="/programming/c-language/debugging" className="text-blue-600 hover:text-blue-700 underline">C Debugging Guide</Link></li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Footer Block */}
+      <PageFooterBlock />
     </div>
   );
 }

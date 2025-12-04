@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Experiment 14 – Dynamic Memory Allocation | C Programming Lab",
+  title: "Experiment 14 – Dynamic Memory Allocation (malloc, calloc, realloc, free) | C Programming Lab Manual",
   description:
-    "Use malloc, calloc, realloc, and free for dynamic memory management in C programming. Learn memory allocation, deallocation, and memory leaks prevention.",
-  keywords: ["C programming", "dynamic memory", "malloc", "calloc", "realloc", "free", "C lab"],
+    "Complete C programming lab experiment for dynamic memory allocation using malloc, calloc, realloc, and free. Includes memory management, error handling, memory leaks prevention, sample I/O, viva questions, and system programming applications.",
+  keywords: [
+    "C programming lab",
+    "dynamic memory allocation",
+    "malloc calloc realloc",
+    "memory management",
+    "C lab manual",
+    "memory leaks",
+    "heap memory"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-14-dynamic-memory",
   },
@@ -36,9 +45,70 @@ export default function Exp14DynamicMemoryPage() {
             Aim
           </h2>
           <div className="prose prose-slate max-w-none">
-            <p className="text-gray-700 leading-relaxed">
-              To understand and implement dynamic memory allocation using <code className="bg-gray-100 px-1.5 py-0.5 rounded">malloc()</code>, <code className="bg-gray-100 px-1.5 py-0.5 rounded">calloc()</code>, <code className="bg-gray-100 px-1.5 py-0.5 rounded">realloc()</code>, and <code className="bg-gray-100 px-1.5 py-0.5 rounded">free()</code> functions in C programming. Learn to allocate memory at runtime and prevent memory leaks.
+            <p className="text-gray-700 leading-relaxed mb-3">
+              To understand and implement dynamic memory allocation using <code className="bg-gray-100 px-1.5 py-0.5 rounded">malloc()</code>, 
+              <code className="bg-gray-100 px-1.5 py-0.5 rounded">calloc()</code>, <code className="bg-gray-100 px-1.5 py-0.5 rounded">realloc()</code>, 
+              and <code className="bg-gray-100 px-1.5 py-0.5 rounded">free()</code> functions in C programming. Learn to allocate memory at runtime and 
+              prevent memory leaks. This experiment helps students understand heap memory, dynamic data structures, and proper resource management.
             </p>
+            <p className="text-gray-700 leading-relaxed">
+              Through this experiment, students will learn to allocate memory dynamically, understand the difference between stack and heap memory, 
+              implement proper memory management, and prevent memory leaks that can cause program failures.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Learning Outcomes
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              After completing this experiment, students will be able to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>Allocate memory dynamically using malloc() and calloc()</li>
+              <li>Resize allocated memory using realloc()</li>
+              <li>Deallocate memory using free() to prevent leaks</li>
+              <li>Check for allocation failures (NULL pointer)</li>
+              <li>Understand the difference between malloc() and calloc()</li>
+              <li>Handle memory allocation errors gracefully</li>
+              <li>Set pointers to NULL after freeing to avoid dangling pointers</li>
+              <li>Create dynamic arrays and data structures</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Algorithm
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              The algorithm for dynamic memory allocation involves allocation, usage, and deallocation:
+            </p>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Dynamic Memory Allocation Algorithm:</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                <li><strong>Allocate Memory:</strong> 
+                  <ul className="list-disc list-inside ml-6 mt-1">
+                    <li>malloc: <code className="bg-white px-1 rounded">ptr = (type*)malloc(n * sizeof(type))</code></li>
+                    <li>calloc: <code className="bg-white px-1 rounded">ptr = (type*)calloc(n, sizeof(type))</code></li>
+                  </ul>
+                </li>
+                <li><strong>Check Allocation:</strong> If <code className="bg-white px-1 rounded">ptr == NULL</code>, allocation failed, handle error</li>
+                <li><strong>Use Memory:</strong> Access allocated memory using pointer (ptr[i] or *(ptr + i))</li>
+                <li><strong>Resize (Optional):</strong> <code className="bg-white px-1 rounded">ptr = realloc(ptr, new_size)</code>, check for NULL</li>
+                <li><strong>Deallocate:</strong> <code className="bg-white px-1 rounded">free(ptr)</code> when done</li>
+                <li><strong>Set to NULL:</strong> <code className="bg-white px-1 rounded">ptr = NULL</code> to prevent dangling pointer</li>
+              </ol>
+            </div>
+            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+              <p className="text-gray-700 text-sm">
+                <strong>Critical Rules:</strong> Always check for NULL after allocation, always free allocated memory, never use freed memory, 
+                set pointer to NULL after freeing, match malloc with free, calloc with free, realloc with free.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -293,11 +363,111 @@ Memory freed successfully!`}</pre>
             </p>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4">
               <p className="text-sm text-yellow-800">
-                <strong>Important:</strong> Always free dynamically allocated memory to prevent memory leaks. Memory leaks occur when allocated memory is not freed, causing the program to consume more and more memory over time.
+                <strong>Important:</strong> Always free dynamically allocated memory to prevent memory leaks. Memory leaks occur when allocated memory 
+                is not freed, causing the program to consume more and more memory over time. In long-running programs, this can exhaust system memory 
+                and cause crashes.
               </p>
             </div>
           </div>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Viva Questions
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the difference between malloc() and calloc()?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">malloc(n * size)</code> allocates n*size bytes, memory contains garbage values. 
+                <code className="bg-gray-100 px-1 rounded">calloc(n, size)</code> allocates n*size bytes and initializes all bytes to zero. 
+                calloc is slower (initialization overhead) but safer (no garbage values). Use malloc when you'll initialize yourself, calloc when 
+                you need zero-initialized memory.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: What happens if we don't free dynamically allocated memory?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Memory leak occurs - allocated memory is never returned to system, program consumes increasing memory. In short programs, OS reclaims 
+                memory on exit, but in long-running programs (servers, daemons), leaks cause memory exhaustion and crashes. Always free memory to 
+                prevent leaks. Use tools like valgrind to detect leaks.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: What is a dangling pointer and how do we prevent it?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Dangling pointer points to memory that has been freed. Using it causes undefined behavior. Prevent by setting pointer to NULL after 
+                free: <code className="bg-gray-100 px-1 rounded">free(ptr); ptr = NULL;</code>. This makes it safe to check (if (ptr != NULL)) and 
+                prevents accidental use. Accessing NULL pointer causes segmentation fault (detectable) vs undefined behavior from dangling pointer.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: How does realloc() work and when might it fail?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                realloc() resizes previously allocated memory. It may extend existing block (if space available) or allocate new block and copy data. 
+                Returns new pointer (may be different from old). Fails if insufficient memory, returns NULL. Important: don't lose old pointer until 
+                checking if realloc succeeded. If realloc fails, original memory is still valid. Always check return value before using.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: What is the difference between stack and heap memory?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Stack: automatic storage for local variables, managed by compiler, fast, limited size, automatically freed when function returns. Heap: 
+                dynamic memory allocated with malloc/calloc, managed manually, larger size, slower, must be explicitly freed. Stack is for fixed-size 
+                local data, heap is for dynamic/variable-size data that outlives function scope.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: Can we free the same memory twice?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                No, double free causes undefined behavior, often crashes. Freeing already-freed memory or freeing memory not allocated with malloc/calloc/realloc 
+                is dangerous. Always set pointer to NULL after free, and check before freeing: <code className="bg-gray-100 px-1 rounded">if (ptr != NULL) free(ptr);</code>. 
+                Freeing NULL is safe (does nothing), so setting to NULL after free prevents double-free errors.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: What happens if malloc() returns NULL?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                NULL means allocation failed (insufficient memory, heap fragmentation, system limits). Using NULL pointer causes segmentation fault. 
+                Always check: <code className="bg-gray-100 px-1 rounded">if (ptr == NULL) { /* handle error */ }</code>. Options: exit program, 
+                return error code, try smaller allocation, or free other memory and retry. Never dereference NULL pointer.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: Why do we need to cast the return value of malloc()?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                In C, malloc() returns <code className="bg-gray-100 px-1 rounded">void*</code> (generic pointer). Casting to specific type 
+                (<code className="bg-gray-100 px-1 rounded">(int*)malloc(...)</code>) makes code clearer and helps catch type errors. In C++, 
+                casting is required (C++ doesn't allow implicit void* conversion). However, in modern C, casting is optional but recommended for 
+                clarity and compatibility.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/programming/c-language" className="text-blue-600 hover:text-blue-700 underline">C Language Basics</Link></li>
+              <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+              <li><Link href="/labs/c-programming/exp-13-search-sort" className="text-blue-600 hover:text-blue-700 underline">Experiment 13: Search & Sort</Link></li>
+              <li><Link href="/programming/c-language/viva-questions" className="text-blue-600 hover:text-blue-700 underline">C Viva Questions</Link></li>
+              <li><Link href="/programming/c-language/debugging" className="text-blue-600 hover:text-blue-700 underline">C Debugging Guide</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between gap-4">

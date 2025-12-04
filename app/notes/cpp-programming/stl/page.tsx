@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "STL Overview in C++ – C++ Programming Notes",
+  title: "Standard Template Library (STL) in C++ – Complete Guide | C++ Notes",
   description:
-    "Learn about Standard Template Library (STL) in C++: containers (vector, list, map, set), iterators, algorithms, and STL functions.",
-  keywords: ["C++ STL", "Standard Template Library", "STL containers", "STL algorithms", "iterators", "vector", "map"],
+    "Comprehensive guide to C++ STL covering containers (vector, list, map, set, deque), iterators, algorithms (sort, find, transform), container adapters, and practical examples for efficient programming.",
+  keywords: [
+    "C++ STL",
+    "Standard Template Library",
+    "STL containers",
+    "STL algorithms",
+    "iterators",
+    "vector map set",
+    "C++ containers",
+    "STL programming"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/notes/cpp-programming/stl",
   },
@@ -26,14 +36,37 @@ export default function STLPage() {
         </h1>
       </div>
 
-      <div className="prose prose-lg max-w-none space-y-6">
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">Introduction to STL</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            The Standard Template Library (STL) is a powerful set of C++ template classes that provide 
-            common data structures and algorithms. STL consists of three main components: containers, iterators, and algorithms.
+      {/* Introduction */}
+      <div className="prose prose-lg max-w-none space-y-6 mb-8">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+          <p className="text-gray-700 leading-relaxed mb-0">
+            The Standard Template Library (STL) is one of C++'s greatest strengths, providing a comprehensive collection of efficient, well-tested 
+            data structures and algorithms. Instead of implementing common data structures from scratch, STL provides ready-to-use containers like 
+            vectors, lists, maps, and sets, along with powerful algorithms that work with them. This library is used in virtually every C++ program 
+            and is essential for productive C++ development.
           </p>
         </div>
+      </div>
+
+      <div className="prose prose-lg max-w-none space-y-8">
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Introduction to Standard Template Library</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The Standard Template Library (STL) is a powerful set of C++ template classes that provide common data structures and algorithms. STL 
+            consists of three main components: containers, iterators, and algorithms. Containers store data, iterators provide access to container 
+            elements, and algorithms operate on data through iterators.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            STL containers are template classes that can store any type of data. They handle memory management automatically, provide efficient 
+            operations, and are thoroughly tested and optimized. Algorithms are template functions that work with iterators, making them work with 
+            any container that provides appropriate iterators.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Understanding STL is crucial for modern C++ programming. It eliminates the need to implement common data structures and algorithms, 
+            reduces bugs, and provides highly optimized code. Most C++ programs use STL extensively, making it essential knowledge for any C++ 
+            programmer.
+          </p>
+        </section>
 
         <div>
           <h2 className="text-2xl font-semibold text-gray-900 mb-3">STL Components</h2>
@@ -358,6 +391,172 @@ int main() {
             </table>
           </div>
         </div>
+
+        {/* Summary Table */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Summary</h2>
+          <div className="overflow-x-auto mb-6">
+            <table className="min-w-full border-collapse border border-gray-300">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Topic</th>
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Key Points</th>
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Difficulty</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-700">
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Sequence Containers</td>
+                  <td className="border border-gray-300 px-4 py-3">vector (dynamic array), list (doubly linked), deque (double-ended queue), array (fixed-size)</td>
+                  <td className="border border-gray-300 px-4 py-3">Beginner</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Associative Containers</td>
+                  <td className="border border-gray-300 px-4 py-3">set/map (sorted, unique), multiset/multimap (sorted, allows duplicates), O(log n) operations</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">Unordered Containers</td>
+                  <td className="border border-gray-300 px-4 py-3">unordered_set/map (hashed), O(1) average, O(n) worst case, C++11 feature</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Iterators</td>
+                  <td className="border border-gray-300 px-4 py-3">Pointers to container elements, begin()/end(), forward/reverse/const iterators, enable algorithms</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="border border-gray-300 px-4 py-3">STL Algorithms</td>
+                  <td className="border border-gray-300 px-4 py-3">sort, find, count, reverse, transform, etc., work with iterators, highly optimized</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-3">Container Adapters</td>
+                  <td className="border border-gray-300 px-4 py-3">stack, queue, priority_queue, provide specific interface using underlying container</td>
+                  <td className="border border-gray-300 px-4 py-3">Intermediate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: When should I use vector vs list vs deque?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Use <code className="bg-gray-100 px-1 rounded">vector</code> for random access, frequent access by index, when size changes moderately. 
+                Use <code className="bg-gray-100 px-1 rounded">list</code> for frequent insertions/deletions in middle, when you don't need random access. 
+                Use <code className="bg-gray-100 px-1 rounded">deque</code> for frequent insertions/deletions at both ends. Vector is most commonly used 
+                (best general-purpose container), list for specific needs (splicing, stable iterators), deque for double-ended operations.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: What is the difference between map and unordered_map?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">map</code> is sorted by key (red-black tree), O(log n) operations, maintains order, requires 
+                comparable keys. <code className="bg-gray-100 px-1 rounded">unordered_map</code> is hashed, O(1) average operations, no order, requires 
+                hashable keys. Use map when you need sorted order or range queries, unordered_map when you need fast lookups and don't care about order. 
+                unordered_map is generally faster for lookups.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: How do iterators work and why are they important?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Iterators are objects that point to container elements, providing a uniform interface to access different containers. They enable algorithms 
+                to work with any container without knowing its internal structure. Iterators support operations like ++, --, *, ==, !=. begin() points to 
+                first element, end() points past last element. Algorithms use iterators to work generically with containers.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: Can I use STL algorithms with arrays?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Yes, STL algorithms work with any iterator range, including pointers. For C-style arrays: <code className="bg-gray-100 px-1 rounded">sort(arr, arr + n)</code> 
+                where arr is array and n is size. Pointers are valid iterators. For std::array: <code className="bg-gray-100 px-1 rounded">sort(arr.begin(), arr.end())</code>. 
+                Algorithms are container-agnostic - they work with any iterator range, making them very flexible.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: What happens when vector needs to grow beyond its capacity?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                When vector size exceeds capacity, it allocates new larger memory (typically doubles capacity), copies/moves all elements to new memory, 
+                deletes old memory. This is expensive (O(n)) but amortized O(1) per insertion. Iterators/pointers to elements become invalid after reallocation. 
+                Use <code className="bg-gray-100 px-1 rounded">reserve()</code> to pre-allocate if you know approximate size to avoid reallocations.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: What is the difference between set and multiset?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                <code className="bg-gray-100 px-1 rounded">set</code> stores unique elements only (duplicates ignored), sorted order. 
+                <code className="bg-gray-100 px-1 rounded">multiset</code> allows duplicate elements, also sorted. Both are O(log n) for insert/find/erase. 
+                Use set when uniqueness is required, multiset when you need to count occurrences or allow duplicates. Both maintain sorted order automatically.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: How do I choose the right container for my needs?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Consider: need for random access? (vector/deque) Frequent insertions in middle? (list) Need sorted order? (set/map) Fast lookups? 
+                (unordered_set/map) Key-value pairs? (map/unordered_map) Unique elements? (set vs multiset). Default choice: vector for sequences, 
+                map for key-value, set for unique sorted elements. Profile if performance is critical - theoretical complexity doesn't always match 
+                real-world performance.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: What are container adapters and how do they differ from containers?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Container adapters (stack, queue, priority_queue) provide specific interfaces using underlying containers. They're not containers themselves 
+                but adapt containers to provide stack/queue behavior. stack uses deque by default, queue uses deque, priority_queue uses vector. You can 
+                specify underlying container. They provide restricted interfaces (LIFO for stack, FIFO for queue) for specific use cases.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            The Standard Template Library is an essential part of modern C++ programming, providing efficient, well-tested data structures and algorithms 
+            that eliminate the need to implement common functionality from scratch. Understanding STL containers, iterators, and algorithms enables you to 
+            write code that's both efficient and maintainable.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Choosing the right container for your needs is crucial for performance. Sequence containers (vector, list, deque) provide different trade-offs for 
+            access patterns, while associative containers (set, map) provide sorted storage, and unordered containers provide fast hash-based access. 
+            Understanding their characteristics helps you make informed decisions.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            STL algorithms work seamlessly with containers through iterators, providing powerful operations like sorting, searching, and transforming data. 
+            Mastery of STL is essential for productive C++ programming - it's used in virtually every C++ program and is a key reason why C++ is so powerful 
+            and efficient for a wide range of applications.
+          </p>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/notes/cpp-programming/templates" className="text-blue-600 hover:text-blue-700 underline">C++ Templates</Link></li>
+              <li><Link href="/notes/cpp-programming/arrays" className="text-blue-600 hover:text-blue-700 underline">C++ Arrays</Link></li>
+              <li><Link href="/notes/cpp-programming/pointers" className="text-blue-600 hover:text-blue-700 underline">C++ Pointers</Link></li>
+              <li><Link href="/notes/cpp-programming/functions" className="text-blue-600 hover:text-blue-700 underline">C++ Functions</Link></li>
+              <li><Link href="/notes/cpp-programming/introduction" className="text-blue-600 hover:text-blue-700 underline">C++ Introduction</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
     </main>
   );

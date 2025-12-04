@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 import { LightBulbIcon, CheckCircleIcon, XCircleIcon, CodeBracketIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "C Programming Tips & Best Practices | CSM Study Zone",
-  description: "Learn C programming best practices including clean coding habits, indentation style, commenting guidelines, debugging approaches, memory management tips, and common mistakes to avoid.",
-  keywords: ["C programming tips", "C best practices", "CSM Study Zone", "C coding standards", "programming guidelines", "C debugging", "memory management", "clean code"],
+  title: "C Programming Tips & Best Practices – Complete Guide | CSM Study Zone",
+  description: "Comprehensive guide to C programming best practices including clean coding habits, indentation style, commenting guidelines, debugging approaches, memory management tips, common mistakes to avoid, and professional coding standards.",
+  keywords: [
+    "C programming tips",
+    "C best practices",
+    "C coding standards",
+    "programming guidelines",
+    "C debugging",
+    "memory management",
+    "clean code",
+    "C programming standards"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/programming/c-language/programming-tips",
   },
@@ -676,6 +686,156 @@ int main() {
           </div>
         </div>
       </div>
+
+      {/* Summary Table */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Best Practices Summary</h2>
+        <div className="overflow-x-auto mb-6">
+          <table className="min-w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Category</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Key Practices</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Priority</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Code Quality</td>
+                <td className="border border-gray-300 px-4 py-3">Meaningful names, small functions, consistent style</td>
+                <td className="border border-gray-300 px-4 py-3">High</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Memory Management</td>
+                <td className="border border-gray-300 px-4 py-3">Always free memory, check NULL, set to NULL after free</td>
+                <td className="border border-gray-300 px-4 py-3">Critical</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Error Handling</td>
+                <td className="border border-gray-300 px-4 py-3">Check return values, validate input, handle errors</td>
+                <td className="border border-gray-300 px-4 py-3">High</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Debugging</td>
+                <td className="border border-gray-300 px-4 py-3">Use compiler warnings, debugger, systematic approach</td>
+                <td className="border border-gray-300 px-4 py-3">High</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
+        <div className="space-y-4 mb-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q1: Why is clean code important in C programming?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Clean code is easier to read, understand, debug, and maintain. It reduces bugs, makes collaboration easier, and saves time in the long 
+              run. Well-written code is self-documenting and reduces the need for extensive comments. It's especially important in C where manual 
+              memory management and low-level operations can lead to complex code.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q2: How do I choose good variable names?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Use descriptive names that indicate purpose: <code className="bg-gray-100 px-1 rounded">student_age</code> instead of 
+              <code className="bg-gray-100 px-1 rounded">a</code>, <code className="bg-gray-100 px-1 rounded">calculate_total</code> instead of 
+              <code className="bg-gray-100 px-1 rounded">func()</code>. Use consistent naming style (snake_case or camelCase). Avoid abbreviations 
+              unless widely understood. Names should be long enough to be clear but short enough to be readable.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q3: What's the best way to handle memory management?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Always check if malloc/calloc returns NULL. Free every allocated memory block. Set pointer to NULL after freeing to prevent dangling 
+              pointers. Match malloc with free, calloc with free. Use tools like Valgrind to detect leaks. Consider using functions that handle 
+              memory automatically when possible. Document memory ownership clearly.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q4: Should I comment every line of code?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              No, only comment when necessary. Good code is self-documenting through meaningful names. Comment complex logic, algorithms, non-obvious 
+              decisions, and function purposes. Don't comment obvious code. Remove commented-out code - use version control instead. Comments should 
+              explain why, not what (code shows what).
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q5: How do I write modular code in C?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Break code into small, focused functions (one responsibility each). Keep functions short (preferably under 50 lines). Use meaningful 
+              function names. Minimize function parameters. Return values instead of modifying globals. Group related functions in separate files. 
+              Use header files for declarations. This makes code reusable, testable, and maintainable.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q6: What compiler flags should I always use?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Always use <code className="bg-gray-100 px-1 rounded">-Wall -Wextra</code> to enable warnings. Use <code className="bg-gray-100 px-1 rounded">-g</code> 
+              for debugging. Use <code className="bg-gray-100 px-1 rounded">-std=c11</code> or <code className="bg-gray-100 px-1 rounded">-std=c99</code> 
+              for standard compliance. Fix all warnings before running. For production, use <code className="bg-gray-100 px-1 rounded">-O2</code> 
+              for optimization. Example: <code className="bg-gray-100 px-1 rounded">gcc -Wall -Wextra -g -std=c11 program.c</code>.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q7: How can I avoid common C programming mistakes?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Always initialize variables. Check pointers for NULL. Validate array bounds. Use == for comparison, not =. Include required headers. 
+              Check return values of functions. Free allocated memory. Compile with warnings and fix them. Test with boundary values. Use const for 
+              values that shouldn't change. Review code before submitting.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q8: What's the difference between good and bad code?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Good code: readable, maintainable, efficient, well-documented, follows standards, handles errors, tested. Bad code: cryptic names, 
+              long functions, no error handling, memory leaks, hard to understand, inconsistent style. Good code can be understood and modified by 
+              others (or yourself months later). Bad code works but is difficult to work with.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Conclusion */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Following best practices in C programming leads to better code quality, fewer bugs, and easier maintenance. Good coding habits developed 
+          early will serve you throughout your programming career. While it may take more time initially, clean, well-structured code saves time 
+          in debugging and maintenance.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Remember that best practices are guidelines, not rigid rules. Adapt them to your project's needs. The most important principle is to 
+          write code that is clear, correct, and maintainable. As you gain experience, you'll develop your own style while following these 
+          fundamental principles.
+        </p>
+      </section>
+
+      {/* Internal Linking */}
+      <section className="mt-10">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li><Link href="/programming/c-language/debugging" className="text-blue-600 hover:text-blue-700 underline">C Debugging Guide</Link></li>
+            <li><Link href="/programming/c-language/important-programs" className="text-blue-600 hover:text-blue-700 underline">Important C Programs</Link></li>
+            <li><Link href="/programming/c-language/viva-questions" className="text-blue-600 hover:text-blue-700 underline">C Viva Questions</Link></li>
+            <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+            <li><Link href="/labs/c-programming" className="text-blue-600 hover:text-blue-700 underline">C Programming Lab Manual</Link></li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Footer Block */}
+      <PageFooterBlock />
     </main>
   );
 }

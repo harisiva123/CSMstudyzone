@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "C Language Viva & Interview Questions | CSM Study Zone",
-  description: "50 C language viva questions with answers covering memory management, pointers, structures, unions, storage classes, compilation process, and interview topics for B.Tech CSM students.",
-  keywords: ["C viva questions", "C interview questions", "CSM Study Zone", "C programming viva", "C exam questions", "C lab viva", "C pointers questions"],
+  title: "C Language Viva & Interview Questions – Complete Guide with Answers | CSM Study Zone",
+  description: "Comprehensive collection of 50+ C language viva questions with detailed answers covering memory management, pointers, structures, unions, storage classes, compilation process, arrays, functions, and interview topics for B.Tech CSM students.",
+  keywords: [
+    "C viva questions",
+    "C interview questions",
+    "C programming viva",
+    "C exam questions",
+    "C lab viva",
+    "C pointers questions",
+    "C interview preparation",
+    "C viva answers"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/programming/c-language/viva-questions",
   },
@@ -343,6 +353,159 @@ export default function VivaQuestionsPage() {
           Practice explaining with real-world examples.
         </p>
       </div>
+
+      {/* Summary Table */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Question Categories Summary</h2>
+        <div className="overflow-x-auto mb-6">
+          <table className="min-w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Category</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Questions</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Importance</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Basic Concepts</td>
+                <td className="border border-gray-300 px-4 py-3">Q1-Q10: C basics, tokens, data types, variables</td>
+                <td className="border border-gray-300 px-4 py-3">High</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Operators & Control</td>
+                <td className="border border-gray-300 px-4 py-3">Q11-Q20: Operators, control statements, loops</td>
+                <td className="border border-gray-300 px-4 py-3">High</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Arrays & Functions</td>
+                <td className="border border-gray-300 px-4 py-3">Q21-Q30: Arrays, strings, functions, recursion</td>
+                <td className="border border-gray-300 px-4 py-3">Very High</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Pointers & Memory</td>
+                <td className="border border-gray-300 px-4 py-3">Q31-Q40: Pointers, dynamic memory, stack/heap</td>
+                <td className="border border-gray-300 px-4 py-3">Very High</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Structures & Advanced</td>
+                <td className="border border-gray-300 px-4 py-3">Q41-Q50: Structures, unions, storage classes, compilation</td>
+                <td className="border border-gray-300 px-4 py-3">High</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
+        <div className="space-y-4 mb-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q1: How should I prepare for C programming viva?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Understand concepts deeply, not just memorize answers. Practice explaining in your own words. Be ready to write code snippets. 
+              Review your lab programs and understand them thoroughly. Practice explaining algorithms and logic. Understand why things work, not 
+              just what they do. Prepare examples for each concept.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q2: What topics are most frequently asked in viva?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Pointers (most common), memory management (malloc/free), arrays and strings, functions (call by value/reference), structures, 
+              file handling, and compilation process. Questions about your lab programs are also very common. Be prepared to explain any program 
+              you've written, including algorithms and logic.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q3: How do I answer questions about pointers confidently?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Understand that pointers store addresses. Practice with simple examples. Draw memory diagrams. Explain pointer arithmetic clearly. 
+              Understand the relationship between arrays and pointers. Practice explaining with examples: <code className="bg-gray-100 px-1 rounded">int *ptr = &amp;x;</code> 
+              means ptr stores address of x. Be clear about * (dereference) and &amp; (address of) operators.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q4: What if I don't know the answer to a question?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Be honest - say you're not sure but explain what you do know. Try to reason through the problem. Show your thinking process. 
+              It's better to admit uncertainty than to guess incorrectly. If you know a related concept, mention it. Examiners appreciate honesty 
+              and logical thinking.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q5: Should I memorize all these answers?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Don't memorize - understand concepts. Once you understand a concept, you can explain it in your own words. Understanding enables 
+              you to answer variations and related questions. Focus on understanding why things work, not just what they are. Practice explaining 
+              concepts to others.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q6: How important is it to know the compilation process?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Very important - it's frequently asked. Understand the four stages: preprocessing (macros, includes), compilation (source to assembly), 
+              assembly (assembly to object code), and linking (object files to executable). Know what happens in each stage. This shows deep 
+              understanding of how C programs work.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q7: What's the best way to explain complex concepts?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Start with simple explanation, then add details. Use examples and analogies. Draw diagrams if possible. Break complex concepts into 
+              smaller parts. Relate to real-world examples. Show code examples. Explain step-by-step. Practice explaining to friends or family - 
+              if you can explain it simply, you understand it well.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q8: How do I handle questions about my lab programs?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Review all your lab programs before viva. Understand the algorithm, logic, and code. Be able to explain why you used specific 
+              approaches. Know alternative solutions. Understand time/space complexity if applicable. Be ready to modify programs or explain 
+              how you would improve them. Practice explaining each program clearly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Conclusion */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Viva examinations test not just your knowledge but your understanding and ability to explain concepts. These questions cover fundamental 
+          C programming concepts that every programmer should know. Understanding these concepts deeply will help you not just in viva but in your 
+          programming career.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Focus on understanding concepts rather than memorizing answers. Practice explaining concepts in your own words. Be confident but honest 
+          - it's okay to say you don't know something. The key is to show your understanding and thinking process. Regular practice and thorough 
+          preparation will help you perform well in viva examinations.
+        </p>
+      </section>
+
+      {/* Internal Linking */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+            <li><Link href="/programming/c-language/important-programs" className="text-blue-600 hover:text-blue-700 underline">Important C Programs</Link></li>
+            <li><Link href="/programming/c-language/programming-tips" className="text-blue-600 hover:text-blue-700 underline">C Programming Tips</Link></li>
+            <li><Link href="/labs/c-programming" className="text-blue-600 hover:text-blue-700 underline">C Programming Lab Manual</Link></li>
+            <li><Link href="/programming/c-language/debugging" className="text-blue-600 hover:text-blue-700 underline">C Debugging Guide</Link></li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Footer Block */}
+      <PageFooterBlock />
     </div>
   );
 }

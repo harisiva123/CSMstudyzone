@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Experiment 5 – Menu-Driven Calculator | C Programming Lab",
+  title: "Experiment 5 – Menu-Driven Calculator Using Switch-Case | C Programming Lab Manual",
   description:
-    "Create a menu-driven calculator using switch-case statements in C programming. Learn menu implementation and user interaction.",
-  keywords: ["C programming", "menu-driven", "calculator", "switch-case", "C lab"],
+    "Complete C programming lab experiment to create a menu-driven calculator. Includes algorithm, flowchart, switch-case implementation, error handling, sample I/O, viva questions, and real-world applications.",
+  keywords: [
+    "C programming lab",
+    "menu-driven program",
+    "switch case",
+    "calculator program",
+    "C lab manual",
+    "user interface",
+    "menu implementation"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-05-menu-calculator",
   },
@@ -36,9 +45,70 @@ export default function Exp05MenuCalculatorPage() {
             Aim
           </h2>
           <div className="prose prose-slate max-w-none">
-            <p className="text-gray-700 leading-relaxed">
-              To create a menu-driven calculator program that performs arithmetic operations (addition, subtraction, multiplication, division, modulus) based on user's choice using <code className="bg-gray-100 px-1.5 py-0.5 rounded">switch-case</code> statement in C programming.
+            <p className="text-gray-700 leading-relaxed mb-3">
+              To create a menu-driven calculator program that performs arithmetic operations (addition, subtraction, multiplication, division, modulus) 
+              based on user's choice using <code className="bg-gray-100 px-1.5 py-0.5 rounded">switch-case</code> statement in C programming. This experiment 
+              introduces students to menu-driven interfaces, switch-case statements, and interactive program design.
             </p>
+            <p className="text-gray-700 leading-relaxed">
+              Through this experiment, students will learn to design user-friendly interfaces, handle multiple options efficiently, implement error 
+              checking (division by zero), and create programs that can perform multiple operations in a single session.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Learning Outcomes
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              After completing this experiment, students will be able to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>Design and implement menu-driven user interfaces</li>
+              <li>Use switch-case statements for multi-way branching</li>
+              <li>Handle user input validation and error cases</li>
+              <li>Implement division by zero error checking</li>
+              <li>Use do-while loops for repeated menu display</li>
+              <li>Create interactive programs that respond to user choices</li>
+              <li>Understand the difference between switch-case and if-else for discrete choices</li>
+              <li>Write programs with proper error handling and user feedback</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Algorithm
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              The algorithm for a menu-driven calculator involves displaying a menu, reading user choice, performing operations, and optionally repeating:
+            </p>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Algorithm Steps:</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                <li><strong>Start:</strong> Begin program execution</li>
+                <li><strong>Declare Variables:</strong> choice, a, b, result, continue_op</li>
+                <li><strong>Display Menu:</strong> Show available operations (1-5) with descriptions</li>
+                <li><strong>Read Choice:</strong> Get user's selection</li>
+                <li><strong>Read Operands:</strong> Get two numbers a and b from user</li>
+                <li><strong>Switch on Choice:</strong>
+                  <ul className="list-disc list-inside ml-6 mt-1">
+                    <li>Case 1: result = a + b, display result</li>
+                    <li>Case 2: result = a - b, display result</li>
+                    <li>Case 3: result = a * b, display result</li>
+                    <li>Case 4: Check if b == 0, if yes show error, else result = a / b</li>
+                    <li>Case 5: Check if b == 0, if yes show error, else result = a % b</li>
+                    <li>Default: Display "Invalid choice" message</li>
+                  </ul>
+                </li>
+                <li><strong>Ask to Continue:</strong> Prompt user if they want another operation</li>
+                <li><strong>Loop:</strong> If user wants to continue, repeat from step 3</li>
+                <li><strong>Stop:</strong> End program execution</li>
+              </ol>
+            </div>
           </div>
         </section>
 
@@ -273,10 +343,102 @@ Enter second number: 6`}</pre>
               <li><strong>Database Management:</strong> CRUD operations (Create, Read, Update, Delete) presented as menu</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-4">
-              The switch-case statement is ideal for handling multiple discrete choices, making code more readable and maintainable than multiple if-else statements. This pattern is fundamental in user interface design.
+              The switch-case statement is ideal for handling multiple discrete choices, making code more readable and maintainable than multiple if-else statements. 
+              This pattern is fundamental in user interface design. Menu-driven programs provide intuitive interfaces that guide users through available options, 
+              making software more accessible and user-friendly.
             </p>
           </div>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Viva Questions
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the difference between switch-case and if-else ladder?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Switch-case works with discrete values (integers, characters, enums) and is more efficient for multiple choices. If-else can handle ranges, 
+                complex conditions, and any boolean expression. Switch is cleaner for menu-driven programs with numbered options, while if-else is more 
+                flexible for complex conditions.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: Why is break statement important in switch-case?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Without break, execution "falls through" to the next case, executing all subsequent cases until a break is encountered. This is usually a bug 
+                but can be intentional when multiple cases share the same code. Always use break unless you intentionally want fall-through behavior.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: Why do we check for division by zero in case 4 and 5?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Division by zero causes undefined behavior (may crash the program). Modulus by zero also causes undefined behavior. We must validate input 
+                before performing these operations to prevent program errors and provide user-friendly error messages instead of crashes.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: Can we use if-else instead of switch-case for this program?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Yes, but switch-case is more appropriate here because we're checking discrete integer values (1-5). Switch is more readable, potentially 
+                faster (compiler can optimize with jump tables), and clearly shows we're handling multiple discrete choices. If-else would work but is less 
+                elegant for this use case.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: Why do we use do-while loop instead of while loop?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Do-while ensures the menu is displayed at least once, which is what we want for a calculator. With while loop, if the condition is false initially, 
+                the menu wouldn't display. Do-while is perfect for menu-driven programs where you want to show the menu first, then check if user wants to continue.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: What happens if user enters a choice outside 1-5?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                The default case handles invalid choices, displaying an error message. The program doesn't crash but informs the user of the invalid input. 
+                This is good error handling - graceful degradation rather than program termination.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: Can we add more operations to this calculator? How?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Yes, add more cases to the switch statement. For example, case 6 for power, case 7 for square root, etc. Update the menu display to show new 
+                options. The switch-case structure makes it easy to extend functionality without modifying existing code.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: Why do we use float for operands instead of int?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Using float allows decimal numbers in calculations, making the calculator more versatile. Division results in decimal values, so float ensures 
+                accurate results. If we used int, division would truncate decimal parts. For modulus operation, we cast to int since modulus works only with integers.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/programming/c-language" className="text-blue-600 hover:text-blue-700 underline">C Language Basics</Link></li>
+              <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+              <li><Link href="/labs/c-programming/exp-04-prime-check" className="text-blue-600 hover:text-blue-700 underline">Experiment 4: Prime Check</Link></li>
+              <li><Link href="/labs/c-programming/exp-06-array-stats" className="text-blue-600 hover:text-blue-700 underline">Experiment 6: Array Statistics</Link></li>
+              <li><Link href="/programming/c-language/programming-tips" className="text-blue-600 hover:text-blue-700 underline">C Programming Tips</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between gap-4">

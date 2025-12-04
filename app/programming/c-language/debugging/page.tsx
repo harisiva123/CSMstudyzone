@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Common C Language Errors & Debugging Guide | CSM Study Zone",
-  description: "Learn to debug C programs by understanding common errors including missing semicolons, undefined references, segmentation faults, pointer errors, array bounds, and logical errors.",
-  keywords: ["C debugging", "C errors", "CSM Study Zone", "C programming errors", "segmentation fault", "pointer errors", "C debugging guide", "fix C errors"],
+  title: "Common C Language Errors & Complete Debugging Guide | CSM Study Zone",
+  description: "Comprehensive guide to debugging C programs covering missing semicolons, undefined references, segmentation faults, pointer errors, array bounds, logical errors, debugging tools, and systematic debugging approaches with examples.",
+  keywords: [
+    "C debugging",
+    "C errors",
+    "C programming errors",
+    "segmentation fault",
+    "pointer errors",
+    "C debugging guide",
+    "fix C errors",
+    "C memory errors",
+    "debugging techniques"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/programming/c-language/debugging",
   },
@@ -451,6 +462,158 @@ printf("DEBUG: Value of ptr = %p\\n", ptr);`}</code></pre>
           Most errors can be caught at compile time. Fix warnings immediately to prevent runtime errors.
         </p>
       </div>
+
+      {/* Summary Table */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Summary</h2>
+        <div className="overflow-x-auto mb-6">
+          <table className="min-w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Error Type</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Common Causes</th>
+                <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Severity</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Missing Semicolon</td>
+                <td className="border border-gray-300 px-4 py-3">Forgetting semicolon after statements</td>
+                <td className="border border-gray-300 px-4 py-3">Compile Error</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Segmentation Fault</td>
+                <td className="border border-gray-300 px-4 py-3">Null pointer, buffer overflow, accessing freed memory</td>
+                <td className="border border-gray-300 px-4 py-3">Runtime Error</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Pointer Errors</td>
+                <td className="border border-gray-300 px-4 py-3">Uninitialized, dangling, null pointer dereference</td>
+                <td className="border border-gray-300 px-4 py-3">Runtime Error</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 px-4 py-3">Array Out of Bounds</td>
+                <td className="border border-gray-300 px-4 py-3">Accessing array beyond allocated size</td>
+                <td className="border border-gray-300 px-4 py-3">Runtime Error</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="border border-gray-300 px-4 py-3">Logical Errors</td>
+                <td className="border border-gray-300 px-4 py-3">Using = instead of ==, off-by-one, infinite loops</td>
+                <td className="border border-gray-300 px-4 py-3">Logic Error</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
+        <div className="space-y-4 mb-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the most common error in C programming?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Missing semicolons are the most common compile-time errors. Segmentation faults from null pointer dereference and array out-of-bounds 
+              are the most common runtime errors. Logical errors like using = instead of == are also very common and can be hard to detect.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q2: How do I debug a segmentation fault?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Use GDB debugger: compile with -g flag, run <code className="bg-gray-100 px-1 rounded">gdb ./program</code>, use <code className="bg-gray-100 px-1 rounded">run</code> 
+              to execute, <code className="bg-gray-100 px-1 rounded">bt</code> for backtrace. Check for null pointers, array bounds, and freed memory access. 
+              Use Valgrind to detect memory errors: <code className="bg-gray-100 px-1 rounded">valgrind ./program</code>.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q3: Why does my program crash with "Segmentation fault (core dumped)"?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              This occurs when accessing invalid memory. Common causes: dereferencing NULL pointer, accessing array out of bounds, using freed memory, 
+              stack overflow from infinite recursion, or buffer overflow. The OS terminates the program to prevent memory corruption. Use debugger 
+              to find exact line causing the crash.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q4: How can I prevent pointer errors?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Always initialize pointers (set to NULL or valid address), check for NULL before dereferencing, set pointer to NULL after free(), 
+              avoid using freed memory, be careful with pointer arithmetic, and use tools like Valgrind to detect pointer misuse. Initialize 
+              pointers at declaration: <code className="bg-gray-100 px-1 rounded">int *ptr = NULL;</code>.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q5: What compiler flags should I use for debugging?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Use <code className="bg-gray-100 px-1 rounded">-Wall -Wextra</code> to enable all warnings, <code className="bg-gray-100 px-1 rounded">-g</code> 
+              for debug symbols (enables GDB), <code className="bg-gray-100 px-1 rounded">-O0</code> to disable optimization for easier debugging. 
+              Full command: <code className="bg-gray-100 px-1 rounded">gcc -Wall -Wextra -g -O0 program.c</code>. Fix all warnings before running.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q6: How do I find memory leaks in my C program?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Use Valgrind: <code className="bg-gray-100 px-1 rounded">valgrind --leak-check=full ./program</code>. It reports memory leaks, 
+              invalid memory access, and use of uninitialized values. Ensure every malloc/calloc has a corresponding free(). Set pointers to NULL 
+              after freeing. Review Valgrind output carefully to identify leaked memory locations.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q7: What is the difference between compile-time and runtime errors?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Compile-time errors occur during compilation (syntax errors, missing semicolons, undefined variables). Runtime errors occur during 
+              program execution (segmentation faults, division by zero, null pointer access). Compile-time errors prevent program from running, 
+              while runtime errors cause program to crash or behave incorrectly during execution.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-900 mb-2">Q8: How do I debug an infinite loop?</h3>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Add printf statements inside loop to see variable values and verify loop condition. Check if loop variable is being incremented/decremented. 
+              Verify loop condition will eventually become false. Use debugger to set breakpoint and step through loop. Look for missing increment 
+              statements or conditions that never change. Use Ctrl+C to interrupt infinite loop.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Conclusion */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Debugging is an essential skill for C programmers. Understanding common errors and their causes helps you write better code and fix issues 
+          more efficiently. Most errors can be prevented by following best practices: always initialize variables, check pointers for NULL, validate 
+          array bounds, and compile with warnings enabled.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Systematic debugging approaches, combined with proper tools like GDB and Valgrind, make the debugging process much more manageable. 
+          Remember that debugging is part of the learning process - every error you fix makes you a better programmer. Take time to understand why 
+          errors occur, not just how to fix them.
+        </p>
+      </section>
+
+      {/* Internal Linking */}
+      <section className="not-prose mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li><Link href="/programming/c-language/programming-tips" className="text-blue-600 hover:text-blue-700 underline">C Programming Tips & Best Practices</Link></li>
+            <li><Link href="/programming/c-language/important-programs" className="text-blue-600 hover:text-blue-700 underline">Important C Programs</Link></li>
+            <li><Link href="/programming/c-language/viva-questions" className="text-blue-600 hover:text-blue-700 underline">C Viva Questions</Link></li>
+            <li><Link href="/labs/c-programming" className="text-blue-600 hover:text-blue-700 underline">C Programming Lab Manual</Link></li>
+            <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Footer Block */}
+      <PageFooterBlock />
     </div>
   );
 }

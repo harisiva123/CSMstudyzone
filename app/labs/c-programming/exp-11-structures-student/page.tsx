@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Experiment 11 – Structures Student Record | C Programming Lab",
+  title: "Experiment 11 – Student Record Management Using Structures | C Programming Lab Manual",
   description:
-    "Create and manage student records using structures in C programming. Learn structure definition, initialization, and member access.",
-  keywords: ["C programming", "structures", "student records", "struct", "C lab"],
+    "Complete C programming lab experiment to create and manage student records using structures. Includes structure definition, array of structures, input/output, search operations, sample I/O, viva questions, and database applications.",
+  keywords: [
+    "C programming lab",
+    "structures",
+    "student records",
+    "array of structures",
+    "C lab manual",
+    "data management",
+    "struct programming"
+  ],
   alternates: {
     canonical: "https://www.csmstudyzone.in/labs/c-programming/exp-11-structures-student",
   },
@@ -36,9 +45,70 @@ export default function Exp11StructuresStudentPage() {
             Aim
           </h2>
           <div className="prose prose-slate max-w-none">
-            <p className="text-gray-700 leading-relaxed">
-              To create a student record management system using structures in C programming. Define a structure to store student information (name, roll number, marks) and perform operations like input, display, and search.
+            <p className="text-gray-700 leading-relaxed mb-3">
+              To create a student record management system using structures in C programming. Define a structure to store student information (name, 
+              roll number, marks) and perform operations like input, display, and search. This experiment helps students understand how to organize 
+              related data using structures and work with arrays of structures.
             </p>
+            <p className="text-gray-700 leading-relaxed">
+              Through this experiment, students will learn to define structures, create arrays of structures, access structure members, pass structures 
+              to functions, and implement basic database-like operations for data management.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Learning Outcomes
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              After completing this experiment, students will be able to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>Define structures to group related data</li>
+              <li>Create arrays of structures for multiple records</li>
+              <li>Access structure members using dot (.) and arrow (-&gt;) operators</li>
+              <li>Pass structures to functions by value and by reference</li>
+              <li>Implement input/output operations for structure data</li>
+              <li>Calculate derived fields (total, percentage) from structure members</li>
+              <li>Search structures based on member values</li>
+              <li>Organize and manage related data efficiently</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Algorithm
+          </h2>
+          <div className="prose prose-slate max-w-none">
+            <p className="text-gray-700 leading-relaxed mb-3">
+              The algorithm for student record management involves structure operations:
+            </p>
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Algorithm Steps:</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-4">
+                <li><strong>Define Structure:</strong> Create Student structure with members (rollNumber, name, marks[], total, percentage)</li>
+                <li><strong>Declare Array:</strong> Create array of Student structures to store multiple records</li>
+                <li><strong>Input Records:</strong> For each student
+                  <ul className="list-disc list-inside ml-6 mt-1">
+                    <li>Read rollNumber, name</li>
+                    <li>Read marks for each subject</li>
+                    <li>Calculate total = sum of all marks</li>
+                    <li>Calculate percentage = (total / (subjects × 100)) × 100</li>
+                  </ul>
+                </li>
+                <li><strong>Display Records:</strong> Loop through array, display each student's information</li>
+                <li><strong>Search Operation:</strong>
+                  <ul className="list-disc list-inside ml-6 mt-1">
+                    <li>Read search roll number</li>
+                    <li>Loop through array comparing rollNumber</li>
+                    <li>If found, display student details; if not, show "not found"</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
           </div>
         </section>
 
@@ -300,10 +370,111 @@ Percentage: 86.60%`}</pre>
               <li><strong>Object-Oriented Concepts:</strong> Structures are the foundation for classes in C++</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mt-4">
-              Understanding structures is crucial for organizing data efficiently. They allow grouping related information together, making code more readable and maintainable. Structures are fundamental to building complex applications.
+              Understanding structures is crucial for organizing data efficiently. They allow grouping related information together, making code more readable 
+              and maintainable. Structures are fundamental to building complex applications. This pattern of organizing data into structures and managing 
+              arrays of structures is the foundation for database systems, information management systems, and object-oriented programming concepts.
             </p>
           </div>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+            Viva Questions
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the difference between dot (.) and arrow (-&gt;) operators?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Dot operator (.) is used to access structure members when you have a structure variable: <code className="bg-gray-100 px-1 rounded">student.name</code>. 
+                Arrow operator (-&gt;) is used when you have a pointer to structure: <code className="bg-gray-100 px-1 rounded">ptr-&gt;name</code> is equivalent to 
+                <code className="bg-gray-100 px-1 rounded">(*ptr).name</code>. Arrow is shorthand for dereference then access member.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q2: Why do we use an array of structures instead of separate arrays?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Array of structures keeps related data together, ensuring data integrity (all fields for one student stay together), easier to pass to 
+                functions, and more intuitive organization. Separate arrays (names[], rollNos[], marks[][]) require maintaining parallel indices and are 
+                error-prone. Structures model real-world entities better.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q3: Should we pass structures to functions by value or by reference?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Pass by reference (pointer) for large structures to avoid copying overhead. Pass by value creates a copy of entire structure, which is 
+                inefficient for large structures. Use pointers when you need to modify the structure or for efficiency. Pass by value only for small 
+                structures or when you need a copy.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q4: How do we initialize a structure array?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Can initialize at declaration: <code className="bg-gray-100 px-1 rounded">struct Student s = {101, "John", {85, 90, 78}, 253, 84.33};</code>. 
+                For arrays: <code className="bg-gray-100 px-1 rounded">struct Student arr[] = {{101, "John", ...}, {102, "Jane", ...}};</code>. 
+                Or initialize element by element using loops and input functions. Designated initializers (C99) allow: 
+                <code className="bg-gray-100 px-1 rounded">{.rollNumber = 101, .name = "John"}</code>.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q5: Can we have nested structures (structure within structure)?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Yes, structures can contain other structures as members. For example, Student structure could contain Date structure for date of birth. 
+                Access nested members using multiple dots: <code className="bg-gray-100 px-1 rounded">student.dob.day</code>, 
+                <code className="bg-gray-100 px-1 rounded">student.dob.month</code>, <code className="bg-gray-100 px-1 rounded">student.dob.year</code>. 
+                This allows modeling complex hierarchical data.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q6: How would you sort students by percentage using structures?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Use any sorting algorithm (bubble, selection, etc.) but swap entire structures instead of individual values. Compare using percentage 
+                member: <code className="bg-gray-100 px-1 rounded">if (students[i].percentage &lt; students[j].percentage)</code>. When swapping, swap 
+                the entire structure: <code className="bg-gray-100 px-1 rounded">temp = students[i]; students[i] = students[j]; students[j] = temp;</code>. 
+                This maintains data integrity.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q7: What is structure padding and how does it affect memory?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Structure padding is when compiler adds extra bytes between members to align data on memory boundaries for efficient access. For example, 
+                structure with char (1 byte) and int (4 bytes) might be 8 bytes total due to 3 bytes padding. This improves performance but wastes memory. 
+                Use <code className="bg-gray-100 px-1 rounded">#pragma pack</code> to control padding, but affects portability.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Q8: How would you modify this to support dynamic number of students?</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Use dynamic memory allocation: <code className="bg-gray-100 px-1 rounded">struct Student *students = (struct Student*)malloc(n * sizeof(struct Student));</code>. 
+                This allows allocating exact memory needed at runtime. Remember to free memory with <code className="bg-gray-100 px-1 rounded">free(students)</code>. 
+                Alternatively, use realloc to resize array if number of students changes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Linking */}
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><Link href="/programming/c-language" className="text-blue-600 hover:text-blue-700 underline">C Language Basics</Link></li>
+              <li><Link href="/programming/c-language/full-notes" className="text-blue-600 hover:text-blue-700 underline">Full C Language Notes</Link></li>
+              <li><Link href="/labs/c-programming/exp-10-array-reverse-pointer" className="text-blue-600 hover:text-blue-700 underline">Experiment 10: Array Reverse</Link></li>
+              <li><Link href="/labs/c-programming/exp-12-file-student-records" className="text-blue-600 hover:text-blue-700 underline">Experiment 12: File Operations</Link></li>
+              <li><Link href="/programming/c-language/viva-questions" className="text-blue-600 hover:text-blue-700 underline">C Viva Questions</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer Block */}
+        <PageFooterBlock />
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between gap-4">
