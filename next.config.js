@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // Fix for Node.js compatibility issues
+      config.externals = config.externals || [];
+    }
+    return config;
+  },
   async redirects() {
     return [
       // Redirect non-www to www
