@@ -50,17 +50,17 @@ export default function HomePageClient() {
     {
       name: "Weekly Challenge #1",
       level: "Beginner",
-      date: "March 15, 2024",
+      date: "March 15, 2026",
     },
     {
       name: "Algorithm Mastery",
       level: "Intermediate",
-      date: "March 22, 2024",
+      date: "March 22, 2026",
     },
     {
       name: "Data Structures Sprint",
       level: "Advanced",
-      date: "March 29, 2024",
+      date: "March 29, 2026",
     },
   ];
 
