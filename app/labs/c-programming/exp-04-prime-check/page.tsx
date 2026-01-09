@@ -369,7 +369,7 @@ for (i = 2; i <= n/2; i++) {
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="font-semibold text-gray-900 mb-2">Q5: Can we use a while loop instead of for loop? Show how.</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Yes: <code className="bg-gray-100 px-1 rounded">int i = 3; while (i &lt;= sqrt(n)) { if (n % i == 0) { flag = 1; break; } i += 2; }</code>. 
+                Yes: <code className="bg-gray-100 px-1 rounded">int i = 3; while (i &lt;= sqrt(n)) {'{'} if (n % i == 0) {'{'} flag = 1; break; {'}'} i += 2; {'}'}</code>. 
                 Both loops are equivalent. The for loop is more concise, while the while loop gives more explicit control over the increment.
               </p>
             </div>

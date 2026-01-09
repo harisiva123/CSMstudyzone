@@ -317,7 +317,7 @@ if (a > b) {
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="font-semibold text-gray-900 mb-2">Q4: Explain nested if-else statements with an example.</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Nested if-else means an if-else statement inside another if-else. For example: <code className="bg-gray-100 px-1 rounded">if (a &gt; b) { if (a &gt; c) largest = a; else largest = c; } else { if (b &gt; c) largest = b; else largest = c; }</code>. 
+                Nested if-else means an if-else statement inside another if-else. For example: <code className="bg-gray-100 px-1 rounded">if (a &gt; b) {'{'} if (a &gt; c) largest = a; else largest = c; {'}'} else {'{'} if (b &gt; c) largest = b; else largest = c; {'}'}</code>. 
                 This allows checking multiple conditions in a hierarchical manner.
               </p>
             </div>

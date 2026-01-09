@@ -353,7 +353,7 @@ while (i <= n) {
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="font-semibold text-gray-900 mb-2">Q6: Can we use a while loop instead of for loop? Show how.</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Yes, while loop can be used: <code className="bg-gray-100 px-1 rounded">int i = 1; while (i &lt;= n) { factorial *= i; i++; }</code>. 
+                Yes, while loop can be used: <code className="bg-gray-100 px-1 rounded">int i = 1; while (i &lt;= n) {'{'} factorial *= i; i++; {'}'}</code>. 
                 Both for and while loops are equivalent for this problem. Choose based on readability and coding style preferences.
               </p>
             </div>
@@ -386,7 +386,7 @@ while (i <= n) {
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="font-semibold text-gray-900 mb-2">Q10: How would you modify the program to calculate factorial using recursion?</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Create a recursive function: <code className="bg-gray-100 px-1 rounded">long long factorial(int n) { if (n &lt;= 1) return 1; return n * factorial(n-1); }</code>. 
+                Create a recursive function: <code className="bg-gray-100 px-1 rounded">long long factorial(int n) {'{'} if (n &lt;= 1) return 1; return n * factorial(n-1); {'}'}</code>. 
                 The base case is n ≤ 1 returning 1, and the recursive case multiplies n by factorial(n-1). This is less efficient than iteration 
                 but demonstrates recursion concepts.
               </p>

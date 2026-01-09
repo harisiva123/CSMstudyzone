@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Structures and Unions in C++ – Complete Guide with Examples | C++ Notes",
+  title: "Structures and Unions in C++ - Complete Guide with Examples | C++ Notes",
   description:
     "Comprehensive guide to structures and unions in C++ programming. Learn structure declaration, initialization, nested structures, structure pointers, typedef, unions, and differences between structures and unions with practical examples.",
   keywords: [
@@ -22,50 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function StructuresPage() {
-  return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-      <div className="mb-6">
-        <Link
-          href="/notes/cpp-programming"
-          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm sm:text-base mb-4"
-        >
-          <span>←</span> Back to C++ Home
-        </Link>
-        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-          Structures & Unions
-        </h1>
-      </div>
-
-      {/* Introduction */}
-      <div className="prose prose-lg max-w-none space-y-6 mb-8">
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-          <p className="text-gray-700 leading-relaxed mb-0">
-            Structures and unions are powerful features in C++ that allow you to create custom data types by grouping related data together. 
-            While arrays store multiple values of the same type, structures enable you to combine different data types into a single entity, 
-            making it easier to model real-world objects and organize complex data. Understanding structures is essential before moving to 
-            classes, as structures form the foundation of object-oriented programming in C++.
-          </p>
-        </div>
-      </div>
-
-      <div className="prose prose-lg max-w-none space-y-8">
-        <section>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">1. Understanding Structures</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            A structure is a user-defined data type that groups related data items of different types under a single name. Structures allow 
-            you to create complex data types that represent real-world entities. For example, a Student structure can contain roll number 
-            (int), name (string), and marks (float) - all related to a single student entity.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Structures are particularly useful when you need to pass multiple related values to functions, return multiple values from functions, 
-            or organize data in a logical way. They provide better code organization and readability compared to using separate variables for 
-            each piece of related data.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Basic Structure</h3>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code1 = String.raw`#include <iostream>
 #include <string>
 using namespace std;
 
@@ -86,11 +43,9 @@ int main() {
     cout << "Marks: " << s1.marks << endl;
     
     return 0;
-}`}</code></pre>
+}`;
 
-          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Initialization</h3>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code2 = String.raw`#include <iostream>
 #include <string>
 using namespace std;
 
@@ -108,13 +63,9 @@ int main() {
     Student s2 = {.rollNo = 102, .name = "Alice", .marks = 90.0};
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. Structure with Functions</h2>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code3 = String.raw`#include <iostream>
 #include <string>
 using namespace std;
 
@@ -139,13 +90,9 @@ int main() {
     cout << "Area: " << r.area() << endl;
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">3. Array of Structures</h2>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code4 = String.raw`#include <iostream>
 #include <string>
 using namespace std;
 
@@ -174,13 +121,9 @@ int main() {
     }
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. Nested Structures</h2>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code5 = String.raw`#include <iostream>
 #include <string>
 using namespace std;
 
@@ -212,13 +155,9 @@ int main() {
          << emp.birthDate.year << endl;
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">5. Structure Pointers</h2>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code6 = String.raw`#include <iostream>
 #include <string>
 using namespace std;
 
@@ -246,13 +185,9 @@ int main() {
     delete s2;
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">6. typedef with Structures</h2>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code7 = String.raw`#include <iostream>
 #include <string>
 using namespace std;
 
@@ -271,17 +206,9 @@ int main() {
     s1.marks = 85.5;
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">7. Unions</h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            A union is similar to a structure, but all members share the same memory location. 
-            Only one member can be accessed at a time:
-          </p>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code8 = String.raw`#include <iostream>
 using namespace std;
 
 union Data {
@@ -305,10 +232,106 @@ int main() {
     // Both intValue and floatValue are overwritten
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
+export default function StructuresPage() {
+  return (
+    <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="mb-6">
+        <Link
+          href="/notes/cpp-programming"
+          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm sm:text-base mb-4"
+        >
+          <span>←</span> Back to C++ Home
+        </Link>
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Structures & Unions
+        </h1>
+      </div>
+
+      <div className="prose prose-lg max-w-none space-y-6 mb-8">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+          <p className="text-gray-700 leading-relaxed mb-0">
+            Structures and unions are powerful features in C++ that allow you to create custom data types by grouping related data together. 
+            While arrays store multiple values of the same type, structures enable you to combine different data types into a single entity, 
+            making it easier to model real-world objects and organize complex data. Understanding structures is essential before moving to 
+            classes, as structures form the foundation of object-oriented programming in C++.
+          </p>
+        </div>
+      </div>
+
+      <div className="prose prose-lg max-w-none space-y-8">
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">1. Understanding Structures</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A structure is a user-defined data type that groups related data items of different types under a single name. Structures allow 
+            you to create complex data types that represent real-world entities. For example, a Student structure can contain roll number 
+            (int), name (string), and marks (float) - all related to a single student entity.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Structures are particularly useful when you need to pass multiple related values to functions, return multiple values from functions, 
+            or organize data in a logical way. They provide better code organization and readability compared to using separate variables for 
+            each piece of related data.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Basic Structure</h3>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code1}</code>
+          </pre>
+
+          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Initialization</h3>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code2}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. Structure with Functions</h2>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code3}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">3. Array of Structures</h2>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code4}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. Nested Structures</h2>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code5}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">5. Structure Pointers</h2>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code6}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">6. typedef with Structures</h2>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code7}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">7. Unions</h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            A union is similar to a structure, but all members share the same memory location. 
+            Only one member can be accessed at a time:
+          </p>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code8}</code>
+          </pre>
+        </section>
+
+        <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-3">8. Structure vs Union</h2>
           <div className="overflow-x-auto">
             <table className="min-w-full border-collapse border border-gray-300 mt-3">
@@ -343,9 +366,8 @@ int main() {
               </tbody>
             </table>
           </div>
-        </div>
+        </section>
 
-        {/* Summary Table */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Summary</h2>
           <div className="overflow-x-auto mb-6">
@@ -393,7 +415,6 @@ int main() {
           </div>
         </section>
 
-        {/* FAQs */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-6">
@@ -445,7 +466,7 @@ int main() {
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="font-semibold text-gray-900 mb-2">Q6: How do I initialize a structure array?</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                You can initialize structure arrays using nested braces: <code className="bg-gray-100 px-1 rounded">Student arr[] = {{101, "John", 85.5}, {102, "Alice", 90.0}}</code>. 
+                You can initialize structure arrays using nested braces: <code className="bg-gray-100 px-1 rounded">Student arr[] = {'{'}{'{'}101, "John", 85.5{'}'}, {'{'}102, "Alice", 90.0{'}'}{'}'}</code>. 
                 Each inner brace initializes one structure element. You can also initialize element by element using loops or individual assignment 
                 statements after declaration.
               </p>
@@ -471,7 +492,6 @@ int main() {
           </div>
         </section>
 
-        {/* Conclusion */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -490,7 +510,6 @@ int main() {
           </p>
         </section>
 
-        {/* Internal Linking */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
@@ -504,12 +523,8 @@ int main() {
           </div>
         </section>
 
-        {/* Footer Block */}
         <PageFooterBlock />
       </div>
     </main>
   );
 }
-
-
-

@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageFooterBlock from "@/components/PageFooterBlock";
 
 export const metadata: Metadata = {
-  title: "Arrays and Strings in C++ – Complete Guide with Examples | C++ Notes",
+  title: "Arrays and Strings in C++ - Complete Guide with Examples | C++ Notes",
   description:
     "Comprehensive guide to arrays and strings in C++ programming. Learn array declaration, initialization, multidimensional arrays, C-style strings, C++ string class, and string manipulation functions with practical examples.",
   keywords: [
@@ -23,57 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ArraysPage() {
-  return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-      <div className="mb-6">
-        <Link
-          href="/notes/cpp-programming"
-          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm sm:text-base mb-4"
-        >
-          <span>←</span> Back to C++ Home
-        </Link>
-        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-          Arrays & Strings
-        </h1>
-      </div>
-
-      {/* Introduction */}
-      <div className="prose prose-lg max-w-none space-y-6 mb-8">
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-          <p className="text-gray-700 leading-relaxed mb-0">
-            Arrays and strings are fundamental data structures in C++ that allow you to store and manipulate collections of data. 
-            Understanding how to work with arrays and strings is essential for any C++ programmer, as they form the foundation for 
-            more complex data structures and algorithms. This comprehensive guide covers everything from basic array operations to 
-            advanced string manipulation techniques.
-          </p>
-        </div>
-      </div>
-
-      <div className="prose prose-lg max-w-none space-y-8">
-        {/* Arrays Section */}
-        <section>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">1. Understanding Arrays</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            An array is a collection of elements of the same data type stored in contiguous memory locations. Arrays provide 
-            an efficient way to store multiple values of the same type under a single variable name. Each element in an array 
-            can be accessed using an index, which starts from 0 in C++.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Arrays are particularly useful when you need to work with a fixed number of elements of the same type. For example, 
-            storing scores of 50 students, temperatures for 7 days of the week, or coordinates for a 3D point. The contiguous 
-            memory allocation makes arrays very efficient for iteration and random access operations.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            One important characteristic of arrays in C++ is that their size must be known at compile time (for static arrays). 
-            This means you cannot resize an array after it's been declared. However, C++ also provides dynamic arrays and the 
-            Standard Template Library (STL) containers like <code className="bg-gray-100 px-1.5 py-0.5 rounded">vector</code> for 
-            more flexible array-like structures.
-          </p>
-
-          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Declaration and Initialization</h3>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code1 = String.raw`#include <iostream>
 using namespace std;
 
 int main() {
@@ -90,11 +40,9 @@ int main() {
     cout << arr1[4] << endl;  // Last element
     
     return 0;
-}`}</code></pre>
+}`;
 
-          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Array Operations</h3>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code2 = String.raw`#include <iostream>
 using namespace std;
 
 int main() {
@@ -123,15 +71,9 @@ int main() {
     cout << "Maximum: " << max << endl;
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. Multidimensional Arrays</h2>
-          
-          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">2D Arrays</h3>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code3 = String.raw`#include <iostream>
 using namespace std;
 
 int main() {
@@ -155,11 +97,9 @@ int main() {
     }
     
     return 0;
-}`}</code></pre>
+}`;
 
-          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">3D Arrays</h3>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code4 = String.raw`#include <iostream>
 using namespace std;
 
 int main() {
@@ -176,13 +116,9 @@ int main() {
     }
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">3. Arrays and Functions</h2>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code5 = String.raw`#include <iostream>
 using namespace std;
 
 // Passing array to function
@@ -206,16 +142,9 @@ int main() {
     doubleArray(arr, 5);
     printArray(arr, 5);
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. C-style Strings</h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            Character arrays terminated by null character ('\0'):
-          </p>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code6 = String.raw`#include <iostream>
 #include <cstring>
 using namespace std;
 
@@ -236,16 +165,9 @@ int main() {
     cout << strcmp(str1, str2) << endl;  // Compare
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">5. C++ String Class</h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            The <code>string</code> class provides better string handling:
-          </p>
-          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
+const code7 = String.raw`#include <iostream>
 #include <string>
 using namespace std;
 
@@ -286,10 +208,125 @@ int main() {
     str1.replace(0, 2, "Hi");  // Replace 2 chars from position 0
     
     return 0;
-}`}</code></pre>
-        </div>
+}`;
 
-        <div>
+const code8 = String.raw`#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    // Array of strings
+    string names[3] = {"Alice", "Bob", "Charlie"};
+    
+    for (int i = 0; i < 3; i++) {
+        cout << names[i] << endl;
+    }
+    
+    // 2D array of characters (C-style)
+    char words[3][20] = {"Hello", "World", "C++"};
+    
+    return 0;
+}`;
+
+export default function ArraysPage() {
+  return (
+    <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="mb-6">
+        <Link
+          href="/notes/cpp-programming"
+          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm sm:text-base mb-4"
+        >
+          <span>←</span> Back to C++ Home
+        </Link>
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Arrays & Strings
+        </h1>
+      </div>
+
+      <div className="prose prose-lg max-w-none space-y-6 mb-8">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+          <p className="text-gray-700 leading-relaxed mb-0">
+            Arrays and strings are fundamental data structures in C++ that allow you to store and manipulate collections of data. 
+            Understanding how to work with arrays and strings is essential for any C++ programmer, as they form the foundation for 
+            more complex data structures and algorithms. This comprehensive guide covers everything from basic array operations to 
+            advanced string manipulation techniques.
+          </p>
+        </div>
+      </div>
+
+      <div className="prose prose-lg max-w-none space-y-8">
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">1. Understanding Arrays</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            An array is a collection of elements of the same data type stored in contiguous memory locations. Arrays provide 
+            an efficient way to store multiple values of the same type under a single variable name. Each element in an array 
+            can be accessed using an index, which starts from 0 in C++.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Arrays are particularly useful when you need to work with a fixed number of elements of the same type. For example, 
+            storing scores of 50 students, temperatures for 7 days of the week, or coordinates for a 3D point. The contiguous 
+            memory allocation makes arrays very efficient for iteration and random access operations.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            One important characteristic of arrays in C++ is that their size must be known at compile time (for static arrays). 
+            This means you cannot resize an array after it's been declared. However, C++ also provides dynamic arrays and the 
+            Standard Template Library (STL) containers like <code className="bg-gray-100 px-1.5 py-0.5 rounded">vector</code> for 
+            more flexible array-like structures.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Declaration and Initialization</h3>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code1}</code>
+          </pre>
+
+          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Array Operations</h3>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code2}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. Multidimensional Arrays</h2>
+          
+          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">2D Arrays</h3>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code3}</code>
+          </pre>
+
+          <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">3D Arrays</h3>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code4}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">3. Arrays and Functions</h2>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code5}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. C-style Strings</h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            Character arrays terminated by null character ({'\''}\\0{'\''}):
+          </p>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code6}</code>
+          </pre>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">5. C++ String Class</h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            The <code>string</code> class provides better string handling:
+          </p>
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
+            <code>{code7}</code>
+          </pre>
+        </section>
+
+        <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-3">6. String Functions</h2>
           <div className="overflow-x-auto">
             <table className="min-w-full border-collapse border border-gray-300 mt-3">
@@ -339,31 +376,15 @@ int main() {
               </tbody>
             </table>
           </div>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-3">7. Array of Strings</h2>
           <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto shadow-lg">
-            <code>{`#include <iostream>
-#include <string>
-using namespace std;
+            <code>{code8}</code>
+          </pre>
+        </section>
 
-int main() {
-    // Array of strings
-    string names[3] = {"Alice", "Bob", "Charlie"};
-    
-    for (int i = 0; i < 3; i++) {
-        cout << names[i] << endl;
-    }
-    
-    // 2D array of characters (C-style)
-    char words[3][20] = {"Hello", "World", "C++"};
-    
-    return 0;
-}`}</code></pre>
-        </div>
-
-        {/* Summary Table */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Summary</h2>
           <div className="overflow-x-auto mb-6">
@@ -411,14 +432,13 @@ int main() {
           </div>
         </section>
 
-        {/* FAQs */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-6">
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h3 className="font-semibold text-gray-900 mb-2">Q1: What is the difference between C-style strings and C++ string class?</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                C-style strings are character arrays terminated by null character ('\0'), requiring manual memory management and 
+                C-style strings are character arrays terminated by null character ({'\''}\\0{'\''}), requiring manual memory management and 
                 functions from cstring header. C++ string class is an object-oriented approach with automatic memory management, 
                 dynamic sizing, and rich member functions. String class is safer and easier to use.
               </p>
@@ -489,7 +509,6 @@ int main() {
           </div>
         </section>
 
-        {/* Conclusion */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Conclusion</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -510,7 +529,6 @@ int main() {
           </p>
         </section>
 
-        {/* Internal Linking */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">Related Links</h2>
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
@@ -525,12 +543,8 @@ int main() {
           </div>
         </section>
 
-        {/* Footer Block */}
         <PageFooterBlock />
       </div>
     </main>
   );
 }
-
-
-
